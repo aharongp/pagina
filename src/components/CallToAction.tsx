@@ -1,3 +1,4 @@
+import logo from './img/logo.png'
 
 export default function CallToAction() {
 
@@ -16,7 +17,7 @@ export default function CallToAction() {
         </button>
         </a>
         <div className="flex justify-center items-center gap-4 mt-6">
-        <img src="src/img/logo.png" alt="Logo BAI automation" width={150} className="animate-pulse"/>
+        <img src={logo} alt="Logo BAI automation" width={150} className="animate-pulse"/>
           <div className="flex gap-2">
             <div className="w-2 h-2 rounded-full bg-green-500"></div>
             <div className="w-2 h-2 rounded-full bg-blue-500"></div>

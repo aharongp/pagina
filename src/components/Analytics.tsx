@@ -1,4 +1,5 @@
 import { Brain, BarChart2, TrendingUp } from 'lucide-react';
+import unlock from './img/unlock.png'
 
 export default function Analytics() {
   return (
@@ -11,7 +12,7 @@ export default function Analytics() {
               <div className="absolute inset-0 flex items-center justify-center">
                  <Brain className="w-32 h-32 text-blue-500" />
               </div> */}
-                <img src="src/img/unlock.png" alt="Unlock image" className=''/>
+                <img src={unlock} alt="Unlock image" className=''/>
             </div>
           </div>
           <div className="order-1 md:order-2">

@@ -1,9 +1,9 @@
-
+import logo from './img/logo.png'
 export default function Header() {
   return (
     <header className="text-center">
       <div className="flex justify-center">
-        <img src="src/img/logo.png" alt="Logo BAI automation" className="animate-pulse"/>
+        <img src={logo} alt="Logo BAI automation" className="animate-pulse"/>
       </div>
       <h1 className="text-4xl font-bold mb-4 low-margin">
         Te ahorramos <span className="text-blue-500">horas</span> de trabajo con IA
