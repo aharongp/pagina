@@ -1,4 +1,4 @@
-import dashboard from './img/dashboard.png'
+import dashboard from '../img/dashboard.png'
 export default function Features() {
   return (
     <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4 bg-[#050505]" >

@@ -1,5 +1,4 @@
-import logo from './img/logo.png'
-
+import logo from '../img/logo.png';
 export default function CallToAction() {
 
   return (
