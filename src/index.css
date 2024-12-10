@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.low-margin{
+    margin-top: -10vh !important;
+}
