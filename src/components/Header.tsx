@@ -17,7 +17,7 @@ export default function Header() {
         {/* video */}
       </div>
 
-      <a href="https://cal.com">
+      <a href="https://cal.com/baiautomation/60-min-meeting">
       <button className="bg-blue-600 text-white mt-5 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
         Agendar consultoría <span className="font-bold">GRATIS</span>
       </button>

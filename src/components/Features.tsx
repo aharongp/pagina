@@ -42,7 +42,7 @@ export default function Features() {
                 Reduce los costos
               </li>
             </ul>
-            <a href="https://cal.com">
+            <a href="https://cal.com/baiautomation/60-min-meeting">
               <button className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
                 Agendar consultoría <span className='font-bold'>GRATIS</span>
               </button>

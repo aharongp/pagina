@@ -10,7 +10,7 @@ export default function CallToAction() {
         <p className="text-gray-400 mb-8">
           Experimenta cómo nunca lo has hecho negocio. Automatiza, escala, ahorra tiempo y dinero conectando todo tu negocio con IA.
         </p>
-        <a href="https://cal.com">
+        <a href="https://cal.com/baiautomation/60-min-meeting">
         <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition ">
           Agendar consultoría <span className='font-bold'>GRATIS</span>
         </button>
