@@ -13,8 +13,8 @@ export default function Header() {
         <br />
         horas de trabajo y costos
       </p>
-      <div className="aspect-video max-w-3xl mx-auto bg-black rounded-lg mb-8">
-        {/* video */}
+      <div className="aspect-video max-w-3xl mx-auto bg-black rounded-2xl mb-8">
+      <iframe className='w-full h-full rounded-2xl' src="https://www.youtube.com/embed/TNRCw0LnQZM?si=8tpqb89cHjv3Vf50" title="video de introduccion" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
       </div>
 
       <a href="https://cal.com/baiautomation/60-min-meeting">
