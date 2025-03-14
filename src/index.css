@@ -5,3 +5,22 @@
 .low-margin{
     margin-top: -10vh !important;
 }
+
+.fondo-cuadriculado {
+    background-color: #e6e5e5; 
+    position: relative;
+}
+
+.fondo-cuadriculado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, rgba(200, 200, 200, 0.5) 1px, transparent 1px), 
+                      linear-gradient(to bottom, rgba(200, 200, 200, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px; /* Tamaño de la cuadrícula */
+    z-index: 1; /* Asegura que esté detrás del contenido */
+    opacity: 0.4;
+}

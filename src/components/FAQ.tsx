@@ -14,8 +14,8 @@ function FAQItem({ question, answer }: FAQItemProps) {
         className="w-full py-4 text-left flex justify-between items-center "
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span>{question}</span>
-        <span className={`transform transition-transform ${isOpen ? 'rotate-180 ease-linear duration-300' : ''}`}>
+        <span className='text-black' >{question}</span>
+        <span className={`text-black transform transition-transform ${isOpen ? 'rotate-180 ease-linear duration-300' : ''}`}>
           ▼
         </span>
       </button>
@@ -46,7 +46,7 @@ export default function FAQ() {
 
   return (
     <section className=" section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
-      <h2 className="text-center text-3xl font-bold mb-12">
+      <h2 className="text-center text-3xl font-bold mb-12 text-black">
         Puede que tengas algunas <span className="text-blue-500">preguntas</span>
       </h2>
       <div className="max-w-2xl mx-auto space-y-4 transition" >

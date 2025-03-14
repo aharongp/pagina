@@ -18,14 +18,16 @@ function App() {
     })
   })
   return (
-    <div className="min-h-screen bg-[#050505] text-white">
-      <Header />
-      <Services />
-      <Features />
-      <Analytics />
-      <Steps />
-      <FAQ />
-      <CallToAction />
+    <div className="min-h-screen bg-[#f2f4f5] text-white fondo-cuadriculado">
+      <div className="relative z-10 p-8">
+        <Header />
+        <Services />
+        <Features />
+        <Analytics />
+        <Steps />
+        <FAQ />
+        <CallToAction />
+      </div>
     </div>
   );
 }

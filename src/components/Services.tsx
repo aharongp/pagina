@@ -27,7 +27,7 @@ export default function Services() {
 
   return (
     <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
-      <h2 className="text-center text-4xl font-bold mb-20">
+      <h2 className="text-center text-black text-4xl font-bold mb-20">
         Automatiza y potencia tu <span className="text-blue-500">negocio</span>
         <br /> con IA
       </h2>

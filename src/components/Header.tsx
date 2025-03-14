@@ -5,7 +5,7 @@ export default function Header() {
       <div className="flex justify-center">
         <img src={logo} alt="Logo BAI automation" className="animate-pulse"/>
       </div>
-      <h1 className="text-4xl font-bold mb-4 low-margin">
+      <h1 className="text-4xl font-bold mb-4 low-margin text-black">
         Te ahorramos <span className="text-blue-500">horas</span> de trabajo con IA
       </h1>
       <p className="text-gray-600 mb-8">
@@ -14,11 +14,11 @@ export default function Header() {
         horas de trabajo y costos
       </p>
       <div className="aspect-video max-w-3xl mx-auto bg-black rounded-2xl mb-8">
-      <iframe className='w-full h-full rounded-2xl' src="https://www.youtube.com/embed/TNRCw0LnQZM?si=8tpqb89cHjv3Vf50" title="video de introduccion" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      <iframe className='w-full h-full rounded-2xl' src="https://www.youtube.com/embed/AwcXf55si_Y?si=HUUHceDlB0-aGx4A" title="video de introduccion" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
       </div>
 
       <a href="https://cal.com/baiautomation/60-min-meeting">
-      <button className="bg-blue-600 text-white mt-5 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+      <button className="bg-[#eddbc1] drop-shadow-lg text-black mt-5 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
         Agendar consultoría <span className="font-bold">GRATIS</span>
       </button>
         </a>
