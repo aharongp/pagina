@@ -3,7 +3,7 @@ export default function CallToAction() {
 
   return (
     <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
-      <div className="max-w-3xl mx-auto bg-[#0A0A1B] rounded-2xl p-8 text-center">
+      <div className="max-w-3xl mx-auto bg-[#664D30] rounded-2xl p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">
           ¿Listo para llevar tu negocio al siguiente nivel?
         </h2>
