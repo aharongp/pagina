@@ -6,6 +6,10 @@
     margin-top: -10vh !important;
 }
 
+.margen-abajo{
+    margin-bottom: 10vh !important;
+}
+
 .fondo-cuadriculado {
     background-color: #e6e5e5; 
     position: relative;
