@@ -31,21 +31,21 @@ export default function Steps() {
   return (
     <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl text-black font-bold mb-10 flex justify-center"><span className="text-blue-500">¿</span>Cómo empezar<span className="text-blue-500">?</span></h2>
+        <h2 className="text-3xl text-black font-bold mb-10 flex justify-center"><span className="text-[#b89595]">¿</span>Cómo empezar<span className="text-[#b89595]">?</span></h2>
         <div className="grid md:grid-cols-2 mb-20 lg:grid-cols-4 gap-6 ">
           {steps.map((step) => (
-            <div key={step.number} className="bg-[#664D30] drop-shadow-xl p-6 rounded-xl hover:scale-105 transition">
-              <div className="text-[#eddbc1] font-bold text-xl mb-2">{step.number}. {step.title}</div>
+            <div key={step.number} className="bg-[#586576] drop-shadow-xl p-6 rounded-xl hover:scale-105 hover:bg-[#748396] transition">
+              <div className="text-gray-100 font-bold text-xl mb-2"><span className="text-[#b89595]">{step.number}. </span> {step.title}</div>
               <p className="text-gray-400">{step.description}</p>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8">
-          <a href="https://cal.com/baiautomation/60-min-meeting">
-            <button className="bg-[#eddbc1] drop-shadow-lg text-black px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-              Agendar consultoría <span className="font-bold">GRATIS</span>
-            </button>
-          </a>
+        <div className="text-center -mt-12">
+        <a href="https://cal.com/baiautomation/60-min-meeting">
+          <button className="bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+            Agendar consultoría <span className="font-bold">GRATIS</span>
+          </button>
+        </a>
         </div>
       </div>
     </section>

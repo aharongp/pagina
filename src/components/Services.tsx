@@ -26,12 +26,12 @@ export default function Services() {
   ];
 
   return (
-    <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
+    <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-32 px-4">
       <h2 className="text-center text-black text-4xl font-bold mb-20">
-        Automatiza y potencia tu <span className="text-blue-500">negocio</span>
+        Automatiza y potencia tu <span className="text-[#b89595]">negocio</span>
         <br /> con IA
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto -mt-[4vh]">
         {services.map((service) => (
           <ServiceCard
             key={service.title}

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,3 +29,43 @@
     z-index: 1; /* Asegura que esté detrás del contenido */
     opacity: 0.4;
 }
+
+
+.fondo-cuadriculado-verde {
+    background-color: #e6e5e5; 
+    position: relative;
+    z-index: 1; /* Asegura que esté detrás del contenido */
+} 
+
+.fondo-cuadriculado-verde::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    background-image: linear-gradient(to right, rgba(21, 207, 36, 0.5) 1px, transparent 1px), 
+                    linear-gradient(to bottom, rgba(59, 151, 100, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px; /* Tamaño de la cuadrícula */
+    z-index: 2; /* Asegura que esté detrás del contenido */
+    opacity: 0.4;
+}
+.cuadro-verde{
+    background-image: linear-gradient(to right, rgba(155, 141, 122, 0.5) 1px, transparent 1px), 
+    linear-gradient(to bottom, rgba(184, 135, 72, 0.5) 1px, transparent 1px);
+background-size: 20px 20px; /* Tamaño de la cuadrícula */
+}
+
+.ibm-plex-serif-thin {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 800;
+    font-size: 6vh;
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+    .ibm-plex-serif-thin {
+        font-size: 4vh; /* Smaller font size for mobile */
+    }
+}
+  

@@ -19,7 +19,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
           ▼
         </span>
       </button>
-      {isOpen && <div className="pb-4 text-gray-400">{answer}</div>}
+      {isOpen && <div className="pb-4 text-gray-500">{answer}</div>}
     </div>
   );
 }
@@ -47,7 +47,7 @@ export default function FAQ() {
   return (
     <section className=" section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
       <h2 className="text-center text-3xl font-bold mb-12 text-black">
-        Puede que tengas algunas <span className="text-blue-500">preguntas</span>
+        Puede que tengas algunas <span className="text-[#b89595]">preguntas</span>
       </h2>
       <div className="max-w-2xl mx-auto space-y-4 transition" >
         {faqs.map((faq) => (

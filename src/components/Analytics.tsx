@@ -17,24 +17,24 @@ export default function Analytics() {
           </div>
           <div className="order-1 md:order-2">
           <div className="flex justify-start mb-8">
-          <div className="inline-block bg-[#664D30] px-6 py-2 rounded-full mb-4">
+          <div className="inline-block bg-[#586576] px-6 py-2 rounded-full mb-4">
             <span className="text-white font-semibold">Mejora estilos</span>
           </div>
         </div>
             <h2 className="text-2xl font-bold mb-8 text-black">
-              <span className="text-blue-500">Hipnotiza</span> a tus leads y lee mejor las{' '}
-              <span className="text-blue-500">estadísticas</span> de tu negocio
+              <span className="text-[#b89595]">Hipnotiza</span> a tus leads y lee mejor las{' '}
+              <span className="text-[#b89595]">estadísticas</span> de tu negocio
             </h2>
             <div className="space-y-4">
-              <div className="bg-[#664D30] p-4 rounded-lg flex items-center gap-4">
+              <div className="bg-[#a6a6a6] p-4 rounded-lg flex items-center gap-4 hover:bg-[#748396]">
                 <Brain className="w-6 h-6 text-[#eddbc1] flex-shrink-0" />
                 <span>Mejora por completo la talla de tu sitio web o App</span>
               </div>
-              <div className="bg-[#664D30] p-4 rounded-lg flex items-center gap-4">
+              <div className="bg-[#a6a6a6] p-4 rounded-lg flex items-center gap-4 hover:bg-[#748396]">
                 <BarChart2 className="w-6 h-6 text-[#eddbc1] flex-shrink-0" />
                 <span>Entiende tus estadísticas en un reporte claro con IA avanzada</span>
               </div>
-              <div className="bg-[#664D30] p-4 rounded-lg flex items-center gap-4">
+              <div className="bg-[#a6a6a6] p-4 rounded-lg flex items-center gap-4 hover:bg-[#748396]">
                 <TrendingUp className="w-6 h-6 text-[#eddbc1] flex-shrink-0" />
                 <span>Sube de leads más rápido y con el típico hipnotismo del marketing con IA</span>
               </div>

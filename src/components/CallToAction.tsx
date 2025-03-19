@@ -1,19 +1,19 @@
-import logo from '../img/logo.png';
+import logo from '../img/logo6.png';
 export default function CallToAction() {
 
   return (
-    <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
-      <div className="max-w-3xl mx-auto bg-[#664D30] rounded-2xl p-8 text-center">
+    <section className="section opacity-100 transform translate-y-10 transition-transform duration-1000 py-16 px-4 ease-linear ">
+      <div className="max-w-3xl mx-auto bg-[#949191] rounded-2xl p-8 text-center shadow-inner shadow-[#606162]/100">
         <h2 className="text-2xl font-bold mb-4">
           ¿Listo para llevar tu negocio al siguiente nivel?
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-200 mb-8">
           Experimenta cómo nunca lo has hecho negocio. Automatiza, escala, ahorra tiempo y dinero conectando todo tu negocio con IA.
         </p>
         <a href="https://cal.com/baiautomation/60-min-meeting">
-        <button className="bg-[#eddbc1] text-black px-6 py-3 rounded-lg hover:bg-blue-700 transition ">
-          Agendar consultoría <span className='font-bold'>GRATIS</span>
-        </button>
+      <button className="bg-[#725252] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+        Agendar consultoría <span className="font-bold">GRATIS</span>
+      </button>
         </a>
         <div className="flex justify-center items-center gap-4 mt-6">
         <img src={logo} alt="Logo BAI automation" width={150} className="animate-pulse"/>

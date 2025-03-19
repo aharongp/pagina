@@ -7,7 +7,7 @@ export default function Features() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="mb-8">
-              <div className="inline-block bg-[#664D30] px-6 py-2 rounded-full mb-4">
+              <div className="inline-block bg-[#586576] px-6 py-2 rounded-full mb-4">
                 <span className="text-white font-semibold">Ahorra tiempo</span>
               </div>
             </div>
@@ -15,9 +15,9 @@ export default function Features() {
               Ahorra tiempo{' '}
               <br />
               automatizando{' '}
-              <span className="text-blue-500">flujos de</span>
+              <span className="text-[#b89595]">flujos de</span>
               <br />
-              <span className="text-blue-500">trabajo con IA</span>
+              <span className="text-[#b89595]">trabajo con IA</span>
             </h2>
             <p className="text-gray-400 mb-6">
               Reducir los errores y tener más eficiencia aumentará la productividad de tu empresa y podrás invertir el tiempo en lo que realmente importa
@@ -43,10 +43,10 @@ export default function Features() {
               </li>
             </ul>
             <a href="https://cal.com/baiautomation/60-min-meeting">
-              <button className="mt-8 bg-[#eddbc1] drop-shadow-lg text-black px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                Agendar consultoría <span className='font-bold'>GRATIS</span>
-              </button>
-            </a>
+            <button className="bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+              Agendar consultoría <span className="font-bold">GRATIS</span>
+            </button>
+        </a>
           </div>
           <div>
             <img
