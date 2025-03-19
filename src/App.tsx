@@ -12,17 +12,46 @@ type Square = {
   y: number;
 };
 
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+  });
+
+  useEffect(() => {
+      const handleResize = () => {
+          setWindowSize({
+              width: window.innerWidth,
+              height: window.innerHeight,
+          });
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowSize;
+};
+
 
 function App() {
   const [squares, setSquares] = useState([]);
-
+  const { width } = useWindowSize();
+  
+  
   useEffect(() => {
     const generateRandomSquares = (num: number) => {
       const newSquares: Square[] = [];
       for (let i = 0; i < num; i++) {
-        const x = Math.floor(Math.random() * 2000); // Ajusta según el tamaño del contenedor
-        const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
-        newSquares.push({ x, y });
+        const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
+        if(width < 600){
+          const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
+          newSquares.push({ x, y });
+
+        }else{
+          const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
+          newSquares.push({ x, y });
+        }
       }
       setSquares(newSquares as never[]);
     };

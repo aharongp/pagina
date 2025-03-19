@@ -1,8 +1,8 @@
-import logo from '../img/logo6.png';
+import logo from '../img/logo13.svg';
 export default function Header() {
   return (
     <header className="text-center">
-      <div className="flex justify-center margen-abajo">
+      <div className="flex justify-center margen-abajo py-8">
         <img src={logo} alt="Logo BAI automation" width={305} className="animate-pulse"/>
       </div>
       <h1 className="text-4xl ibm-plex-serif-thin font-bold mb-4 low-margin text-black">
