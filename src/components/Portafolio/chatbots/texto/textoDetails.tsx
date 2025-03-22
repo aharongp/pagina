@@ -187,15 +187,5 @@ export default function ChatbotTextoDetail() {
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
   );
 }
