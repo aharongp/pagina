@@ -1,4 +1,4 @@
-import logo from '../img/logo13.svg';
+import logo from '../../img/logo13.svg';
 export default function Header() {
   return (
     <header className="text-center">

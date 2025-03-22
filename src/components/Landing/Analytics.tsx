@@ -1,5 +1,5 @@
 import { Brain, BarChart2, TrendingUp } from 'lucide-react';
-import analytics from '../img/unlock.png';
+import analytics from '../../img/unlock.png';
 
 export default function Analytics() {
   return (
