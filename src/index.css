@@ -69,3 +69,29 @@ background-size: 20px 20px; /* Tamaño de la cuadrícula */
     }
 }
   
+.transcript-container {
+    max-width: 600px; /* Ajusta el ancho según sea necesario */
+    margin: auto;
+  }
+  
+.messages {
+display: flex;
+flex-direction: column;
+}
+
+.message {
+margin: 10px 0; /* Espaciado entre mensajes */
+padding: 10px;
+border-radius: 5px;
+max-width: 80%; /* Limitar el ancho de los mensajes */
+}
+
+.agent {
+align-self: flex-start; /* Alinear a la izquierda */
+background-color: #e0f7fa; /* Color de fondo para el agente */
+}
+
+.user {
+align-self: flex-end; /* Alinear a la derecha */
+background-color: #ffe0b2; /* Color de fondo para el usuario */
+}

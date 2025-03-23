@@ -10,6 +10,10 @@ const agentId = "agent_bfdc2ed2ba09c069c7a1c8967a";
 interface RegisterCallResponse {
   access_token: string;
 }
+interface TranscriptItem {
+  role: string;
+  content: string;
+}
 
 const retellWebClient = new RetellWebClient();
 
@@ -21,6 +25,9 @@ export default function ChatbotVozDetail() {
   const [squares, setSquares] = useState([]);
   const { width } = useWindowSize();
   const [isCalling, setIsCalling] = useState(false);
+  const [transcript, setTranscript] = useState<TranscriptItem[]>([]);
+
+
 
 
     useEffect(() => {
@@ -45,22 +52,17 @@ export default function ChatbotVozDetail() {
         console.log("agent_stop_talking");
       });
       
-      // Real time pcm audio bytes being played back, in format of Float32Array
-      // only available when emitRawAudioSamples is true
-      retellWebClient.on("audio", (audio) => {
-        // console.log(audio);
-      });
       
       // Update message such as transcript
       // You can get transcrit with update.transcript
       // Please note that transcript only contains last 5 sentences to avoid the payload being too large
-      retellWebClient.on("update", (update) => {
-        // console.log(update);
-      });
-      
-      retellWebClient.on("metadata", (metadata) => {
-        // console.log(metadata);
-      });
+      const handleUpdate = (update: { transcript: TranscriptItem[] }) => {
+        if (update.transcript) {
+          setTranscript(update.transcript);
+        }
+      };
+      retellWebClient.on("update", handleUpdate);
+
       
       retellWebClient.on("error", (error) => {
         console.error("An error occurred:", error);
@@ -100,14 +102,15 @@ export default function ChatbotVozDetail() {
       document.addEventListener('scroll', handleScroll);
       return () => {
         document.removeEventListener('scroll', handleScroll);
+        retellWebClient.off("call_started");
+        retellWebClient.off("call_ended");
+        retellWebClient.off("agent_start_talking");
+        retellWebClient.off("agent_stop_talking");
+        retellWebClient.off("update");
+        retellWebClient.off("error");
       };
     }, []);
 
-
-    // Initialize the SDK
-    useEffect(() => {
-
-    }, []);
   
     const toggleConversation = async () => {
       if (isCalling) {
@@ -276,6 +279,17 @@ export default function ChatbotVozDetail() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="transcript-container">
+          <h1>Transcripción de la Llamada</h1>
+          <div className="messages">
+            {transcript.map((item, index) => (
+              <div key={index} className={`message ${item.role}`}>
+                <span>{item.role}: {item.content}</span>
+              </div>
+            ))}
           </div>
         </div>
 
