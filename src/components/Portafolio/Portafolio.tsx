@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Square, useWindowSize } from "../Landing/Home";
 import Header from "./Header";
 import Texto from "./chatbots/texto/texto";
+import Voz from "./chatbots/voz/voz";
 
 export default function Portafolio(){
   const [squares, setSquares] = useState([]);
@@ -62,6 +63,7 @@ export default function Portafolio(){
         <div className="relative z-10 p-8">
             <Header />
             <Texto />
+            <Voz />
         </div>
       </div>
     </div>

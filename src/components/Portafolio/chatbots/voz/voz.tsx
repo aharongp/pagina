@@ -1,118 +1,66 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import { RetellWebClient } from "retell-client-js-sdk";
+import { Bot } from 'lucide-react';
+import { chatbotVoz } from './infoVoz';
+import { Link } from 'react-router-dom';
 
-const agentId = "agent_bfdc2ed2ba09c069c7a1c8967a";
 
-interface RegisterCallResponse {
-  access_token: string;
-}
-
-const retellWebClient = new RetellWebClient();
-
-const App = () => {
-  const [isCalling, setIsCalling] = useState(false);
-
-  // Initialize the SDK
-  useEffect(() => {
-    retellWebClient.on("call_started", () => {
-      console.log("call started");
-    });
-    
-    retellWebClient.on("call_ended", () => {
-      console.log("call ended");
-      setIsCalling(false);
-    });
-    
-    // When agent starts talking for the utterance
-    // useful for animation
-    retellWebClient.on("agent_start_talking", () => {
-      console.log("agent_start_talking");
-    });
-    
-    // When agent is done talking for the utterance
-    // useful for animation
-    retellWebClient.on("agent_stop_talking", () => {
-      console.log("agent_stop_talking");
-    });
-    
-    // Real time pcm audio bytes being played back, in format of Float32Array
-    // only available when emitRawAudioSamples is true
-    retellWebClient.on("audio", (audio) => {
-      // console.log(audio);
-    });
-    
-    // Update message such as transcript
-    // You can get transcrit with update.transcript
-    // Please note that transcript only contains last 5 sentences to avoid the payload being too large
-    retellWebClient.on("update", (update) => {
-      // console.log(update);
-    });
-    
-    retellWebClient.on("metadata", (metadata) => {
-      // console.log(metadata);
-    });
-    
-    retellWebClient.on("error", (error) => {
-      console.error("An error occurred:", error);
-      // Stop the call
-      retellWebClient.stopCall();
-    });
-  }, []);
-
-  const toggleConversation = async () => {
-    if (isCalling) {
-      retellWebClient.stopCall();
-    } else {
-      const registerCallResponse = await registerCall(agentId);
-      if (registerCallResponse.access_token) {
-        retellWebClient
-          .startCall({
-            accessToken: registerCallResponse.access_token,
-          })
-          .catch(console.error);
-        setIsCalling(true); // Update button to "Stop" when conversation starts
-      }
-    }
-  };
-
-  async function registerCall(agentId: string): Promise<RegisterCallResponse> {
-    try {
-      // Update the URL to match the new backend endpoint you created
-      const response = await fetch("https://backend-call-chatbots.onrender.com/create-web-call", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          agent_id: agentId, // Pass the agentId as agent_id
-          // You can optionally add metadata and retell_llm_dynamic_variables here if needed
-          // metadata: { your_key: "your_value" },
-          // retell_llm_dynamic_variables: { variable_key: "variable_value" }
-        }),
-      });
-  
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
-  
-      const data: RegisterCallResponse = await response.json();
-      return data;
-    } catch (err) {
-      console.log(err);
-      throw new Error(err as string);
-    }
-  }
+export default function Voz() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button onClick={toggleConversation}>
-          {isCalling ? "Stop" : "Start"}
-        </button>
+    <div className="min-h-screen text-white">
+      {/* Header */}
+      <header className="container mx-auto px-4 py-12 text-center">
+        <div className="flex items-center justify-center mb-6">
+          <Bot className="w-12 h-12 text-[#b89595] mr-4" />
+          <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#b89595] to-purple-500">
+            Chatbots de voz
+          </h1>
+        </div>
+        <p className="text-xl text-black max-w-2xl mx-auto">
+          Descrubre algunas demos de nuestros chatbots de voz
+        </p>
       </header>
+
+      <main className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {chatbotVoz.map((bot) => (
+            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={bot.image} 
+                  alt={bot.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 flex-grow">
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-[#b89595] rounded-lg mr-3">
+                    {bot.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold">{bot.name}</h3>
+                </div>
+                <p className="text-gray-400 mb-4">{bot.description}</p>
+                <div className="space-y-2">
+                  {bot.capabilities.map((capability:any, index:any) => (
+                    <div key={index} className="flex items-center text-sm">
+                      <span className="w-2 h-2 bg-[#b89595] rounded-full mr-2" />
+                      <span>{capability}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="px-6 py-4 bg-gray-900 border-t border-gray-700 mt-auto">
+                <Link 
+                  to={`/voz/${bot.id}`}
+                  
+                  className="block w-full bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
-};
-
-export default App;
+}
