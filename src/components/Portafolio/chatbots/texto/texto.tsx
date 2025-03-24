@@ -2,7 +2,6 @@ import { Bot } from 'lucide-react';
 import { chatbotTexto } from './infoTexto';
 import { Link } from 'react-router-dom';
 
-
 export default function Texto() {
 
   return (
@@ -26,7 +25,7 @@ export default function Texto() {
             <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col">
               <div className="h-48 overflow-hidden">
                 <img 
-                  src={bot.image} 
+                  src={bot.image}
                   alt={bot.name}
                   className="w-full h-full object-cover"
                 />
@@ -54,7 +53,7 @@ export default function Texto() {
                   
                   className="block w-full bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
                 >
-                  Learn More
+                  Ver más
                 </Link>
               </div>
             </div>

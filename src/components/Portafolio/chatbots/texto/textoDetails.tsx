@@ -105,7 +105,7 @@ export default function ChatbotTextoDetail() {
         <img 
           src={chatbot.image} 
           alt={chatbot.name}
-          className="w-full h-full object-cover brightness-50"
+          className="w-full h-full object-cover brightness-50 rounded-lg"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#586576]/80 to-transparent rounded-lg" />
         <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -132,7 +132,7 @@ export default function ChatbotTextoDetail() {
           <div className="bg-[#586576] rounded-xl p-6">
             <div className="flex items-center mb-4">
               <CheckCircle className="w-6 h-6 text-[#b89595] mr-2" />
-              <h2 className="text-2xl font-semibold">Key Features</h2>
+              <h2 className="text-2xl font-semibold">Caracteristicas</h2>
             </div>
             <ul className="space-y-3">
               {chatbot.features?.map((feature, index) => (
@@ -148,7 +148,7 @@ export default function ChatbotTextoDetail() {
           <div className="bg-[#586576] rounded-xl p-6">
             <div className="flex items-center mb-4">
               <Target className="w-6 h-6 text-[#b89595] mr-2" />
-              <h2 className="text-2xl font-semibold">Use Cases</h2>
+              <h2 className="text-2xl font-semibold">Casos de uso</h2>
             </div>
             <ul className="space-y-3">
               {chatbot.useCases?.map((useCase, index) => (
@@ -164,7 +164,7 @@ export default function ChatbotTextoDetail() {
           <div className="bg-[#586576] rounded-xl p-6">
             <div className="flex items-center mb-4">
               <Cpu className="w-6 h-6 text-[#b89595] mr-2" />
-              <h2 className="text-2xl font-semibold">Technical Specs</h2>
+              <h2 className="text-2xl font-semibold">Especificaciones tecnicas</h2>
             </div>
             <div className="space-y-3">
               {chatbot.technicalSpecs && Object.entries(chatbot.technicalSpecs).map(([key, value]) => (
@@ -176,13 +176,8 @@ export default function ChatbotTextoDetail() {
             </div>
           </div>
         </div>
-
-        {/* Demo CTA */}
-        {/* <div className="mt-12 text-center">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
-            Try Demo
-          </button>
-        </div> */}
+        <script src={chatbot.src1}></script>
+        <script src={chatbot.src2}></script>
       </div>
       </div>
     </div>

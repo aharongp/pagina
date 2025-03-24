@@ -54,7 +54,7 @@ export default function Voz() {
                   
                   className="block w-full bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
                 >
-                  Learn More
+                  Ver más
                 </Link>
               </div>
             </div>

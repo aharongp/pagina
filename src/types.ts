@@ -10,12 +10,14 @@ export interface ChatbotTexto {
   features?: string[];
   useCases?: string[];
   technicalSpecs?: {
-    language: string;
-    framework: string;
-    deployment: string;
-    responseTime: string;
-    accuracy: string;
+    lenguaje: string;
+    plataforma: string;
+    despliegue: string;
+    respuesta: string;
+    precision: string;
   };
+  src1: string;
+  src2: string;
 }
 
 export interface ChatbotVoz{
@@ -28,10 +30,11 @@ export interface ChatbotVoz{
   features?: string[];
   useCases?: string[];
   technicalSpecs?: {
-    language: string;
-    framework: string;
-    deployment: string;
-    responseTime: string;
-    accuracy: string;
+    lenguaje: string;
+    plataforma: string;
+    despliegue: string;
+    respuesta: string;
+    precision: string;
   };
+  agentId: string;
 }

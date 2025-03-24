@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react';
 import { Square, useWindowSize } from '../../../Landing/Home';
 import { chatbotVoz } from "./infoVoz";
 
-const agentId = "agent_bfdc2ed2ba09c069c7a1c8967a";
-
 interface RegisterCallResponse {
   access_token: string;
 }
@@ -27,8 +25,7 @@ export default function ChatbotVozDetail() {
   const [isCalling, setIsCalling] = useState(false);
   const [transcript, setTranscript] = useState<TranscriptItem[]>([]);
 
-
-
+  const agentId = chatbot?.agentId as string;
 
     useEffect(() => {
       retellWebClient.on("call_started", () => {
@@ -75,11 +72,11 @@ export default function ChatbotVozDetail() {
         for (let i = 0; i < num; i++) {
           const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
           if(width < 600){
-            const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
+            const y = Math.floor(Math.random() * 1500); // Ajusta según el tamaño del contenedor
             newSquares.push({ x, y });
   
           }else{
-            const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
+            const y = Math.floor(Math.random() * 900); // Ajusta según el tamaño del contenedor
             newSquares.push({ x, y });
           }
         }
@@ -158,7 +155,6 @@ export default function ChatbotVozDetail() {
 
   if (!chatbot) {
     return (
-
           <div className="min-h-screen bg-[#f2f4f5] text-white fondo-cuadriculado">
             <div className="">
             {squares.map((square: Square, index) => (
