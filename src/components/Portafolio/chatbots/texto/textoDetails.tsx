@@ -7,11 +7,21 @@ import { Square, useWindowSize } from '../../../Landing/Home';
 export default function ChatbotTextoDetail() {
   const { id } = useParams();
   const chatbot = chatbotTexto.find(bot => bot.id === Number(id));
-    const [squares, setSquares] = useState([]);
-    const { width } = useWindowSize();
-    
+  const [squares, setSquares] = useState([]);
+  const { width } = useWindowSize();
+
     
     useEffect(() => {
+      const script1 = document.createElement('script');
+      script1.src = chatbot?.src1 as string;
+      script1.async = true;
+      document.body.appendChild(script1);
+  
+      const script2 = document.createElement('script');
+      script2.src = chatbot?.src2 as string;
+      script2.async = true;
+      document.body.appendChild(script2);
+
       const generateRandomSquares = (num: number) => {
         const newSquares: Square[] = [];
         for (let i = 0; i < num; i++) {
@@ -43,13 +53,11 @@ export default function ChatbotTextoDetail() {
   
       document.addEventListener('scroll', handleScroll);
       return () => {
+        document.body.removeChild(script1);
+        document.body.removeChild(script2);
         document.removeEventListener('scroll', handleScroll);
       };
     }, []);
-
-
-
-
 
   if (!chatbot) {
     return (
@@ -176,8 +184,6 @@ export default function ChatbotTextoDetail() {
             </div>
           </div>
         </div>
-        <script src={chatbot.src1}></script>
-        <script src={chatbot.src2}></script>
       </div>
       </div>
     </div>
