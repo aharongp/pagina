@@ -7,61 +7,51 @@ import { Square, useWindowSize } from '../../../Landing/Home';
 export default function ChatbotTextoDetail() {
   const { id } = useParams();
   const chatbot = chatbotTexto.find(bot => bot.id === Number(id));
+
   const [squares, setSquares] = useState([]);
   const { width } = useWindowSize();
 
-    
-    useEffect(() => {
-      const script1 = document.createElement('script');
-      script1.src = chatbot?.src1 as string;
-      script1.async = true;
-      document.body.appendChild(script1);
-  
-      const script2 = document.createElement('script');
-      script2.src = chatbot?.src2 as string;
-      script2.async = true;
-      document.body.appendChild(script2);
 
-      const generateRandomSquares = (num: number) => {
-        const newSquares: Square[] = [];
-        for (let i = 0; i < num; i++) {
-          const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
-          if(width < 600){
-            const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
-            newSquares.push({ x, y });
-  
-          }else{
-            const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
-            newSquares.push({ x, y });
-          }
+    
+  useEffect(() => {
+    const generateRandomSquares = (num: number) => {
+      const newSquares: Square[] = [];
+      for (let i = 0; i < num; i++) {
+        const x = Math.floor(Math.random() * (width -25)); 
+        if(width < 600){
+          const y = Math.floor(Math.random() * 1500); 
+          newSquares.push({ x, y });
+
+        }else{
+          const y = Math.floor(Math.random() * 900);
+          newSquares.push({ x, y });
         }
-        setSquares(newSquares as never[]);
-      };
-  
-      generateRandomSquares(200); // Genera 10 cuadrados aleatorios
-  
-      const handleScroll = () => {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            section.classList.remove('opcity-0', 'translate-y-10');
-            section.classList.add('opacity-100', 'translate-y-0');
-          }
-        });
-      };
-  
-      document.addEventListener('scroll', handleScroll);
-      return () => {
-        document.body.removeChild(script1);
-        document.body.removeChild(script2);
-        document.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
+      }
+      setSquares(newSquares as never[]);
+    };
+
+    generateRandomSquares(200); 
+
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          section.classList.remove('opcity-0', 'translate-y-10');
+          section.classList.add('opacity-100', 'translate-y-0');
+        }
+      });
+    };
+    document.addEventListener('scroll', handleScroll);
+
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   if (!chatbot) {
     return (
-
           <div className="min-h-screen bg-[#f2f4f5] text-white fondo-cuadriculado">
             <div className="">
             {squares.map((square: Square, index) => (

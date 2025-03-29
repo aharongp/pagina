@@ -72,7 +72,7 @@ background-size: 20px 20px; /* Tamaño de la cuadrícula */
 .transcript-container {
     max-width: 600px; /* Ajusta el ancho según sea necesario */
     margin: auto;
-  }
+}
   
 .messages {
 display: flex;
@@ -88,10 +88,30 @@ max-width: 80%; /* Limitar el ancho de los mensajes */
 
 .agent {
 align-self: flex-start; /* Alinear a la izquierda */
-background-color: #e0f7fa; /* Color de fondo para el agente */
+background-color: #074047; /* Color de fondo para el agente */
 }
 
 .user {
 align-self: flex-end; /* Alinear a la derecha */
-background-color: #ffe0b2; /* Color de fondo para el usuario */
+background-color: #613a00; /* Color de fondo para el usuario */
 }
+
+iframe.bpFab:hover {
+    transition: none !important;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+iframe.bpFab {
+    z-index: 9998;
+    position: fixed;
+    bottom: 0rem !important;
+    left: 50%; /* Centra horizontalmente */
+    right: 1.5rem;
+    height: 4rem;
+    width: 20% !important;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translate(-50%, -50%) !important; /* Ajusta la posición para centrar */
+}
+

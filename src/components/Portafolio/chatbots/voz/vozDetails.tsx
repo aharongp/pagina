@@ -1,6 +1,6 @@
 import { RetellWebClient } from "retell-client-js-sdk";
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Target, Cpu } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Target, Cpu, PhoneCall, PhoneOff } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Square, useWindowSize } from '../../../Landing/Home';
 import { chatbotVoz } from "./infoVoz";
@@ -278,23 +278,31 @@ export default function ChatbotVozDetail() {
           </div>
         </div>
 
-        <div className="transcript-container">
-          <h1>Transcripción de la Llamada</h1>
-          <div className="messages">
-            {transcript.map((item, index) => (
-              <div key={index} className={`message ${item.role}`}>
-                <span>{item.role}: {item.content}</span>
-              </div>
-            ))}
+        <div className="transcript-container pt-12 flex justify-between items-start">
+          <div className="transcript-content">
+            <h3 className="text-black font-semibold">Transcripción de la Llamada</h3>
+            <div className="messages">
+              {transcript.map((item, index) => (
+                <div key={index} className={`message ${item.role}`}>
+                  <span>{item.role}: {item.content}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Botón alineado a la derecha */}
+          <div className="mt-12">
+            <button 
+              onClick={toggleConversation} 
+              className={`font-semibold py-3 px-8 rounded-lg transition-colors duration-300 ${isCalling ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'} text-white`}
+            >
+              {isCalling ? <PhoneOff /> : <PhoneCall />}
+            </button>
           </div>
         </div>
 
-        {/* Demo CTA */}
-        <div className="mt-12 text-center">
-          <button onClick={toggleConversation} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
-          {isCalling ? "Terminar conversacion" : "Comenzar conversacion"}
-          </button>
-        </div>
+
+
       </div>
       </div>
     </div>

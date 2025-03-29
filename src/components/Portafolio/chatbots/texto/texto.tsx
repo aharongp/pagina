@@ -3,7 +3,6 @@ import { chatbotTexto } from './infoTexto';
 import { Link } from 'react-router-dom';
 
 export default function Texto() {
-
   return (
     <div className="min-h-screen text-white">
       {/* Header */}
