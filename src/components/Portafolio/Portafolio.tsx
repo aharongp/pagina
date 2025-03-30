@@ -3,30 +3,11 @@ import { Square, useWindowSize } from "../Landing/Home";
 import Header from "./Header";
 import Texto from "./chatbots/texto/texto";
 import Voz from "./chatbots/voz/voz";
+import { Meteors } from "../magicui/meteors";
+import { Globe } from "../magicui/globe";
 
 export default function Portafolio(){
-  const [squares, setSquares] = useState([]);
-  const { width } = useWindowSize();
-  
-  
   useEffect(() => {
-    const generateRandomSquares = (num: number) => {
-      const newSquares: Square[] = [];
-      for (let i = 0; i < num; i++) {
-        const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
-        if(width < 600){
-          const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
-          newSquares.push({ x, y });
-
-        }else{
-          const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
-          newSquares.push({ x, y });
-        }
-      }
-      setSquares(newSquares as never[]);
-    };
-
-    generateRandomSquares(200); // Genera 10 cuadrados aleatorios
 
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
@@ -45,22 +26,11 @@ export default function Portafolio(){
     };
   }, []);
   return (
-    <div className="min-h-screen bg-[#f2f4f5] text-white fondo-cuadriculado">
+    <div className="min-h-screen bg-[#f2f4f5] text-white ">
+      <Globe className="top-80" />
       <div className="">
-      {squares.map((square: Square, index) => (
-            <div
-              key={index}
-              className="cuadro cuadro-verde animate-pulse"
-              style={{
-                position: 'absolute',
-                width: '15px',
-                height: '15px',
-                left: `${square.x}px`,
-                top: `${square.y}px`,
-              }}
-            />
-          ))}
         <div className="relative z-10 p-8">
+            <Meteors number={40} maxDuration={15}/>
             <Header />
             <Texto />
             <Voz />

@@ -9,6 +9,8 @@ import FAQ from './FAQ';
 import CallToAction from './CallToAction';
 import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
+import { Globe } from '../magicui/globe';
+import { Meteors } from '../magicui/meteors';
 
 
 export type Square = {
@@ -95,13 +97,8 @@ function Home() {
       return <Navigate to="/Portafolio" />;
   }
 
-  
-
-
   return (
     <div className="min-h-screen bg-[#f2f4f5] text-white">
-      <div className="">
-        {/* Tu contenido existente */}
         <AnimatedGridPattern
           numSquares={30}
           maxOpacity={0.7}
@@ -112,6 +109,12 @@ function Home() {
             "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#708090]",
           )}
         />
+      <Globe className="top-20" />
+      <Meteors number={40} maxDuration={15}/>
+      
+      <div className="">
+        {/* Tu contenido existente */}
+
         <div className="relative z-10 p-8">
           <Header />
           <Services />

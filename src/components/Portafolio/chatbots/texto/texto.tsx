@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Texto() {
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-white">      
       {/* Header */}
       <header className="container mx-auto px-4 py-12 text-center">
         <div className="flex items-center justify-center mb-6">

@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
 import logo from '../../img/logo13.svg';
-import { ArrowLeft } from 'lucide-react';
 import { Navigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 export default function Header() {
