@@ -7,7 +7,7 @@ export default function Header() {
         <img src={logo} alt="Logo BAI automation" width={305} className="animate-pulse"/>
       </div>
       <h1 className="text-4xl ibm-plex-serif-thin font-bold mb-4 low-margin text-black">
-        Te ahorramos <span className="text-[#b89595]">horas</span> de trabajo con IA
+        Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con IA
       </h1>
       <p className="text-gray-600 mb-8 ">
         Te ayudamos a automatizar tareas repetitivas de tu negocio, ahorrar

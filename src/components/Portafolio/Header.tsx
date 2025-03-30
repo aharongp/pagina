@@ -22,7 +22,7 @@ export default function Header() {
         <img src={logo} alt="Logo BAI automation" width={305} className="animate-pulse"/>
       </div>
       <div className="static-button">
-        <button id='volver-botton' onClick={handleRedirect} className='bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100'>Volver</button>
+        <button id='volver-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Volver</button>
       </div>
     </header>
   );
