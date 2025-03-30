@@ -196,5 +196,9 @@ iframe.bpFab {
   body {
     @apply bg-background text-foreground;
     }
+
+#logo {
+    margin-left: 5vh;
+}
 }
 

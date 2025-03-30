@@ -11,7 +11,9 @@ import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
 import { Globe } from '../magicui/globe';
 import { Meteors } from '../magicui/meteors';
-
+import Spacer from './Space';
+import Logo from './Logo';
+import { MarqueeDemoVertical } from './Comentarios';
 
 export type Square = {
   x: number;
@@ -98,39 +100,40 @@ function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f2f4f5] text-white">
+    <div className="min-h-screen bg-[#f2f4f5] text-white flex">
         <AnimatedGridPattern
-          numSquares={30}
-          maxOpacity={0.7}
-          duration={3}
-          repeatDelay={1}
-          className={cn(
-            "[mask-image:radial-gradient(5000px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#708090]",
-          )}
+            numSquares={30}
+            maxOpacity={0.7}
+            duration={3}
+            repeatDelay={1}
+            className={cn(
+                "[mask-image:radial-gradient(5000px_circle_at_center,white,transparent)]",
+                "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#708090]",
+            )}
         />
-      <Globe className="top-20" />
-      <Meteors number={40} maxDuration={15}/>
-      
-      <div className="">
-        {/* Tu contenido existente */}
-
-        <div className="relative z-10 p-8">
-          <Header />
-          <Services />
-          <Features />
-          <Analytics />
-          <Steps />
-          <FAQ />
-          <CallToAction />
+        <Globe/>
+        <Meteors number={40} maxDuration={15}/>
+        <div className="flex-grow">
+            <div className="relative z-10 p-8">
+                <Logo />
+                <div className="flex-none w-1/4 p-3 -mt-10"> {/* Ajusta el ancho según sea necesario */}
+                  <MarqueeDemoVertical />
+                </div>
+                <Spacer height="25vh" />
+                <Header />
+                <Services />
+                <Features />
+                <Analytics />
+                <Steps />
+                <FAQ />
+                <CallToAction />
+            </div>
         </div>
-      </div>
-      {/* Botón estático */}
-      <div className="static-button">
-        <button id='portafolio-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
-      </div>
+        <div className="static-button">
+            <button id='portafolio-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
+        </div>
     </div>
-  );
+);
 }
 
 export default Home;
