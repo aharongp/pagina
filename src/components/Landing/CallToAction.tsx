@@ -1,16 +1,18 @@
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+//import { useState } from 'react';
+//import { Navigate } from 'react-router-dom';
 import logo from '../../img/logo13.svg';
 export default function CallToAction() {
-  const [redirect, setRedirect] = useState(false);
 
-  const handleRedirect = () => {
-      setRedirect(true);
-  };
+//const [redirect, setRedirect] = useState(false);
 
-  if (redirect) {
-      return <Navigate to="/Portafolio" />;
-  }
+  //const handleRedirect = () => {
+    //  setRedirect(true);
+ // };
+
+ // if (redirect) {
+ //     return <Navigate to="/Portafolio" />;
+//}
+ 
 
   return (
     <section className="section opacity-100 transform translate-y-10 transition-transform duration-1000 py-16 px-4 ease-linear ">
@@ -27,9 +29,6 @@ export default function CallToAction() {
       </button>
         </a>
         <div className="flex justify-center items-center gap-4 mt-6">
-          <button onClick={handleRedirect} className="bg-[#242424] text-gray-100 mt-5 px-4 py-2 rounded-lg transition shadow-lg shadow-[#c6c6c6]">
-            <span className="font-bold">Mira algunas soluciones</span>
-          </button>
           <img src={logo} alt="Logo BAI automation" width={150} className="animate-pulse"/>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <a href="https://www.instagram.com/bai_automations?igsh=aWRkcThzZ202Z3Jw">
