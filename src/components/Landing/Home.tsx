@@ -6,6 +6,8 @@ import Analytics from './Analytics';
 import Steps from './Steps';
 import FAQ from './FAQ';
 import CallToAction from './CallToAction';
+import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
+import { cn } from '@/lib/utils';
 
 export type Square = {
   x: number;
@@ -35,28 +37,28 @@ export const useWindowSize = () => {
 
 
 function Home() {
-  const [squares, setSquares] = useState([]);
-  const { width } = useWindowSize();
+  // const [squares, setSquares] = useState([]);
+  // const { width } = useWindowSize();
   
   
   useEffect(() => {
-    const generateRandomSquares = (num: number) => {
-      const newSquares: Square[] = [];
-      for (let i = 0; i < num; i++) {
-        const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
-        if(width < 600){
-          const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
-          newSquares.push({ x, y });
+    // const generateRandomSquares = (num: number) => {
+    //   const newSquares: Square[] = [];
+    //   for (let i = 0; i < num; i++) {
+    //     const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
+    //     if(width < 600){
+    //       const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
+    //       newSquares.push({ x, y });
 
-        }else{
-          const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
-          newSquares.push({ x, y });
-        }
-      }
-      setSquares(newSquares as never[]);
-    };
+    //     }else{
+    //       const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
+    //       newSquares.push({ x, y });
+    //     }
+    //   }
+    //   setSquares(newSquares as never[]);
+    // };
 
-    generateRandomSquares(200); // Genera 10 cuadrados aleatorios
+    // generateRandomSquares(200); // Genera 10 cuadrados aleatorios
 
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
@@ -75,9 +77,9 @@ function Home() {
     };
   }, []);
   return (
-    <div className="min-h-screen bg-[#f2f4f5] text-white fondo-cuadriculado">
+    <div className="min-h-screen bg-[#f2f4f5] text-white">
       <div className="">
-      {squares.map((square: Square, index) => (
+      {/* {squares.map((square: Square, index) => (
             <div
               key={index}
               className="cuadro cuadro-verde animate-pulse"
@@ -89,7 +91,17 @@ function Home() {
                 top: `${square.y}px`,
               }}
             />
-          ))}
+          ))} */}
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.7}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(5000px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#b89595]",
+          )}
+        />
         <div className="relative z-10 p-8">
           <Header />
           <Services />

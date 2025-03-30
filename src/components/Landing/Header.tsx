@@ -1,9 +1,8 @@
 import logo from '../../img/logo13.svg';
-import { Meteors } from '../magicui/meteors';
+
 export default function Header() {
   return (
     <header className="text-center">
-      <Meteors number={30}/>
       <div className="flex justify-center margen-abajo py-8">
         <img src={logo} alt="Logo BAI automation" width={305} className="animate-pulse"/>
       </div>
