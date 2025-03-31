@@ -1,6 +1,8 @@
-import { Warehouse } from 'lucide-react';
+import { Camera, Warehouse } from 'lucide-react';
 import { ChatbotTexto } from '../../../../types';
 import inmoassist from '../../../../img/inmoassist.png';
+import researchAssist from '../../../../img/researchAssist.jpeg';
+
 
 export const chatbotTexto: ChatbotTexto[] = [
   {
@@ -33,6 +35,36 @@ export const chatbotTexto: ChatbotTexto[] = [
     },
     src1: "https://cdn.botpress.cloud/webchat/v2.2/inject.js",
     src2: "https://files.bpcontent.cloud/2025/03/25/02/20250325023303-QVBFG64Y.js"
+  },
+  {
+    id: 2,
+    name: "ResearchAssist",
+    description: "Un asistente de IA especializado en la generacion de contenido con las ultimas noticias sobre un tema especifico",
+    capabilities: ["Busqueda en la web", "Automatización de Tareas", "Generacion de contenido"],
+    icon: <Camera className="w-6 h-6" />,
+    image: researchAssist,
+    features: [
+      "Comprensión avanzada del contexto",
+      "Soporte multilingüe",
+      "Acceso a informacion sobre noticias actualizadas",
+      "Personalizacion para la generacion de contenido",
+      "Publicar contenido en RRSS"
+    ],
+    useCases: [
+      "Generador de contenido",
+      "Extractor de noticias de blogs",
+      "Automatización de contenido",
+      "Investigación de mercado"
+    ],
+    technicalSpecs: {
+      lenguaje: "JavaScript",
+      plataforma: "Botpress",
+      despliegue: "Web, whatsapp, IG, etc",
+      respuesta: "<15s",
+      precision: "80%"
+    },
+    src1: "https://cdn.botpress.cloud/webchat/v2.2/inject.js",
+    src2: "https://files.bpcontent.cloud/2025/03/31/00/20250331000634-Y1FDBM3T.js"
   },
 ];
 

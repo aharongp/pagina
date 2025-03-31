@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ComponentPropsWithoutRef } from "react";
-
+ 
 interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
   /**
    * Optional CSS class name to apply custom styles
@@ -31,13 +31,13 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
    */
   repeat?: number;
 }
-
+ 
 export function Marquee({
   className,
   reverse = false,
   pauseOnHover = false,
   children,
-  vertical = true,
+  vertical = false,
   repeat = 4,
   ...props
 }: MarqueeProps) {

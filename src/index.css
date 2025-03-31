@@ -7,19 +7,13 @@
     margin-top: -10vh !important;
 }
 
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
 
-  .static-button {
+.static-button {
     position: fixed; /* Fija el botón en la pantalla */
     top: 1vh; /* Distancia desde la parte inferior */
     right: 1vh; /* Distancia desde la derecha */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    
-  }
-
+}
 
 .margen-abajo{
     margin-bottom: 12vh !important;
@@ -73,7 +67,7 @@ background-size: 20px 20px; /* Tamaño de la cuadrícula */
 .ibm-plex-serif-thin {
     font-family: "IBM Plex Serif", serif;
     font-weight: 800;
-    font-size: 6vh;
+    font-size: 4vh;
     font-style: normal;
 }
 
@@ -196,9 +190,5 @@ iframe.bpFab {
   body {
     @apply bg-background text-foreground;
     }
-
-#logo {
-    margin-left: 5vh;
-}
 }
 

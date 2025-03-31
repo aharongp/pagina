@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Square, useWindowSize } from "../Landing/Home";
+import { useEffect } from "react";
 import Header from "./Header";
 import Texto from "./chatbots/texto/texto";
 import Voz from "./chatbots/voz/voz";

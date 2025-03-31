@@ -11,9 +11,8 @@ import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
 import { Globe } from '../magicui/globe';
 import { Meteors } from '../magicui/meteors';
-import Spacer from './Space';
 import Logo from './Logo';
-import { MarqueeDemoVertical } from './Comentarios';
+import Video from './Video';
 
 export type Square = {
   x: number;
@@ -47,31 +46,9 @@ export const useWindowSize = () => {
 
 
 function Home() {
-  // const [squares, setSquares] = useState([]);
-  // const { width } = useWindowSize();
-
-  
-  
+  const { width } = useWindowSize();
   
   useEffect(() => {
-    // const generateRandomSquares = (num: number) => {
-    //   const newSquares: Square[] = [];
-    //   for (let i = 0; i < num; i++) {
-    //     const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
-    //     if(width < 600){
-    //       const y = Math.floor(Math.random() * 6000); // Ajusta según el tamaño del contenedor
-    //       newSquares.push({ x, y });
-
-    //     }else{
-    //       const y = Math.floor(Math.random() * 4000); // Ajusta según el tamaño del contenedor
-    //       newSquares.push({ x, y });
-    //     }
-    //   }
-    //   setSquares(newSquares as never[]);
-    // };
-
-    // generateRandomSquares(200); // Genera 10 cuadrados aleatorios
-
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
       sections.forEach(section => {
@@ -99,6 +76,40 @@ function Home() {
       return <Navigate to="/Portafolio" />;
   }
 
+  if (width < 600){
+    return(
+    <div className="min-h-screen bg-[#f2f4f5] text-white flex">
+      <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.7}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+              "[mask-image:radial-gradient(5000px_circle_at_center,white,transparent)]",
+              "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#708090]",
+          )}
+      />
+      <Globe className='top-40'/>
+      <div className="flex-grow">
+          <div className="relative z-10 p-8">
+              <Logo />
+              <Header/>
+              <Video />
+              <Services />
+              <Features />
+              <Analytics />
+              <Steps />
+              <FAQ />
+              <CallToAction />
+          </div>
+      </div>
+      <div className="static-button">
+          <button id='portafolio-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 px-5 py-2 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
+      </div>
+    </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#f2f4f5] text-white flex">
         <AnimatedGridPattern
@@ -111,16 +122,14 @@ function Home() {
                 "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#708090]",
             )}
         />
-        <Globe/>
-        <Meteors number={40} maxDuration={15}/>
+        <Globe className='top-40'/>
+        <Meteors number={40} maxDuration={15} className='mt-10'/>
         <div className="flex-grow">
             <div className="relative z-10 p-8">
                 <Logo />
-                <div className="flex-none w-1/4 p-3 -mt-10"> {/* Ajusta el ancho según sea necesario */}
-                  <MarqueeDemoVertical />
-                </div>
-                <Spacer height="25vh" />
-                <Header />
+                <Header/>
+                
+                <Video />
                 <Services />
                 <Features />
                 <Analytics />
@@ -129,9 +138,7 @@ function Home() {
                 <CallToAction />
             </div>
         </div>
-        <div className="static-button">
-            <button id='portafolio-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
-        </div>
+        <button onClick={handleRedirect} className='static-button bg-[#586576] text-gray-100 px-6 py-3 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
     </div>
 );
 }

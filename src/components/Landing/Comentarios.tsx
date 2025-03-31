@@ -62,7 +62,8 @@ const ReviewCard = ({
   );
 };
 
-export function MarqueeDemoVertical() {
+export function Comentarios() {
+
   return (
     <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
       <Marquee pauseOnHover vertical className="[--duration:20s]">
@@ -75,10 +76,9 @@ export function MarqueeDemoVertical() {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      {/* Eliminamos los divs con fondo */}
-      {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div> */}
     </div>
+
+    
   );
 }
 
