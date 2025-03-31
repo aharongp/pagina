@@ -13,6 +13,7 @@ import { Globe } from '../magicui/globe';
 import { Meteors } from '../magicui/meteors';
 import Logo from './Logo';
 import Video from './Video';
+import { PulsatingButton } from '../magicui/pulsating-button';
 
 export type Square = {
   x: number;
@@ -103,8 +104,8 @@ function Home() {
               <CallToAction />
           </div>
       </div>
-      <div className="static-button">
-          <button id='portafolio-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 px-5 py-2 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
+      <div className="static-botton">
+      <PulsatingButton onClick={handleRedirect} pulseColor="#ff5733" duration="1.5s" className="static-botton">Probar Soluciones</PulsatingButton>    
       </div>
     </div>
     );
@@ -122,7 +123,7 @@ function Home() {
                 "inset-x-0 inset-y-[-30%] h-[450%] skew-y-12 text-[#708090]",
             )}
         />
-        <Globe className='top-40'/>
+        <Globe className='mt-20'/>
         <Meteors number={40} maxDuration={15} className='mt-10'/>
         <div className="flex-grow">
             <div className="relative z-10 p-8">
@@ -138,7 +139,7 @@ function Home() {
                 <CallToAction />
             </div>
         </div>
-        <button onClick={handleRedirect} className='static-button bg-[#586576] text-gray-100 px-6 py-3 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Probar Soluciones</button>
+        <PulsatingButton onClick={handleRedirect} pulseColor="#ff5733" duration="1.5s" className="static-botton">Probar Soluciones</PulsatingButton>    
     </div>
 );
 }

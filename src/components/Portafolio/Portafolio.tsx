@@ -3,7 +3,6 @@ import Header from "./Header";
 import Texto from "./chatbots/texto/texto";
 import Voz from "./chatbots/voz/voz";
 import { Meteors } from "../magicui/meteors";
-import { Globe } from "../magicui/globe";
 
 export default function Portafolio(){
   useEffect(() => {
@@ -26,7 +25,6 @@ export default function Portafolio(){
   }, []);
   return (
     <div className="min-h-screen bg-[#f2f4f5] text-white ">
-      <Globe className="top-80" />
       <div className="">
         <div className="relative z-10 p-8">
             <Meteors number={40} maxDuration={15}/>

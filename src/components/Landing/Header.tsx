@@ -18,17 +18,20 @@ export default function Header() {
     );
   }
   return (
-    <header className="text-center">
-      <div className="flex-none w-1/4 p-3 -mt-10"> {/* Ajusta el ancho según sea necesario */}
+    <header className="text-center -mt-32" >
+      <div className="flex-none w-1/4 p-3"> {/* Ajusta el ancho según sea necesario */}
         <Comentarios />
       </div>
-      <button className="absolute right-10 -mt-[20vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+      <button className="absolute right-[43vh] -mt-[60vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
           Agendar consultoría <span className="font-bold">GRATIS</span>
       </button>
-      <button className="absolute right-10 -mt-[27vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+      <button className="absolute right-[41vh] -mt-[52vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
           Agendar consultoría <span className="font-bold">GRATIS</span>
       </button>
-      <button className="absolute right-[30vh] -mt-[35vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+      <button className="absolute right-[40vh] -mt-[44vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
+          Agendar consultoría <span className="font-bold">GRATIS</span>
+      </button>
+      <button className="absolute right-[40vh] -mt-[36vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
           Agendar consultoría <span className="font-bold">GRATIS</span>
       </button>
       <div className="text-right">

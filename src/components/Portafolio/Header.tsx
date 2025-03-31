@@ -1,6 +1,7 @@
 import logo from '../../img/logo13.svg';
 import { Navigate } from 'react-router-dom';
 import { useState } from 'react';
+import { PulsatingButton } from '../magicui/pulsating-button';
 
 
 export default function Header() {
@@ -20,7 +21,7 @@ export default function Header() {
         <img src={logo} alt="Logo BAI automation" width={305} className="animate-pulse"/>
       </div>
       <div className="static-button">
-        <button id='volver-botton' onClick={handleRedirect} className='bg-[#586576] text-gray-100 rounded-lg hover:bg-[#453948] transition shadow-lg shadow-[#464b5b]/100'>Volver</button>
+      <PulsatingButton onClick={handleRedirect} pulseColor="#ff5733" duration="1.5s" className="static-botton">Volver</PulsatingButton>    
       </div>
     </header>
   );
