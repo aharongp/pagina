@@ -1,7 +1,9 @@
-import { Camera, Warehouse } from 'lucide-react';
+import { Camera, HandPlatter, Warehouse } from 'lucide-react';
 import { ChatbotTexto } from '../../../../types';
 import inmoassist from '../../../../img/inmoassist.png';
 import researchAssist from '../../../../img/researchAssist.jpeg';
+import supportAssist from '../../../../img/supportchatbot.jpeg';
+
 
 
 export const chatbotTexto: ChatbotTexto[] = [
@@ -66,9 +68,35 @@ export const chatbotTexto: ChatbotTexto[] = [
     src1: "https://cdn.botpress.cloud/webchat/v2.2/inject.js",
     src2: "https://files.bpcontent.cloud/2025/03/31/00/20250331000634-Y1FDBM3T.js"
   },
+  {
+    id: 2,
+    name: "BAIAssist",
+    description: "Un asistente de IA especializado en el soporte al cliente con preguntas frecuentes y base de conocimientos",
+    capabilities: ["Base de conocimientos", "FQA", "Transferir a un humano"],
+    icon: <HandPlatter className="w-6 h-6" />,
+    image: supportAssist,
+    features: [
+      "Acceso a preguntas frecuentes",
+      "Soporte multilingüe",
+      "Acceso a informacion sobre documentacion",
+      "Personalizacion de soporte",
+      "Puede transferirte con un humano"
+    ],
+    useCases: [
+      "Soporte al cliente de un software",
+      "Buscador de información sobre servicios",
+      "Extractor de documentacion de un software",
+      "Chatbot de onboarding",
+      "Soporte para empleados"
+    ],
+    technicalSpecs: {
+      lenguaje: "JavaScript",
+      plataforma: "Botpress",
+      despliegue: "Web, whatsapp, IG, etc",
+      respuesta: "<3s",
+      precision: "95%"
+    },
+    src1: "https://cdn.botpress.cloud/webchat/v2.2/inject.js",
+    src2: "https://files.bpcontent.cloud/2025/03/31/21/20250331213330-YFJNS5WC.js"
+  },
 ];
-
-
-{/* <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/03/25/02/20250325023303-QVBFG64Y.js"></script> */}
-    
