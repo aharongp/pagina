@@ -1,3 +1,8 @@
+import { ShinyButton } from "../magicui/shiny-button";
+import { NeonGradientCard } from "../magicui/neon-gradient-card";
+
+
+
 interface Step {
   number: string;
   title: string;
@@ -34,18 +39,19 @@ export default function Steps() {
         <h2 className="text-3xl text-black font-bold mb-10 flex justify-center"><span className="text-[#b89595]">¿</span>Cómo empezar<span className="text-[#b89595]">?</span></h2>
         <div className="grid md:grid-cols-2 mb-20 lg:grid-cols-4 gap-6 ">
           {steps.map((step) => (
-            <div key={step.number} className="bg-[#586576] drop-shadow-xl p-6 rounded-xl hover:scale-105 hover:bg-[#748396] transition">
-              <div className="text-gray-100 font-bold text-xl mb-2"><span className="text-[#b89595]">{step.number}. </span> {step.title}</div>
-              <p className="text-gray-400">{step.description}</p>
+            <div key={step.number} className="bg-[#586576] drop-shadow-xl p-1 rounded-xl hover:scale-105 hover:bg-[#748396] transition"><NeonGradientCard>
+              <div className="text-gray-800 font-bold text-xl mb-2"><span className="text-[#b89595]">{step.number}. </span> {step.title}</div>
+              <p className="text-gray-600">{step.description}</p>
+              </NeonGradientCard>
             </div>
           ))}
         </div>
         <div className="text-center -mt-12">
-        <a href="https://cal.com/baiautomation/60-min-meeting">
-          <button className="bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
-            Agendar consultoría <span className="font-bold">GRATIS</span>
-          </button>
-        </a>
+      <a href="https://cal.com/baiautomation/60-min-meeting">
+      <button className="bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#e7cdcd] transition shadow-lg shadow-[#d4a5a5]/100"><ShinyButton>
+        Agendar consultoría <span className="font-bold">GRATIS</span></ShinyButton>
+      </button>
+      </a>
         </div>
       </div>
     </section>

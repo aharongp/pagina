@@ -1,5 +1,8 @@
 import { Comentarios } from "./Comentarios";
 import { useWindowSize } from "./Home";
+import { ShinyButton } from "../magicui/shiny-button";
+import { BoxReveal } from "../magicui/box-reveal";
+
 
 export default function Header() {
   const { width } = useWindowSize();
@@ -19,21 +22,33 @@ export default function Header() {
   }
   return (
     <header className="text-center -mt-32" >
-      <div className="flex-none w-1/4 p-3"> {/* Ajusta el ancho según sea necesario */}
-        <Comentarios />
+      <div className="flex-none w-1/4 p-3"><BoxReveal>{/* Ajusta el ancho según sea necesario */}
+        <Comentarios /></BoxReveal>
       </div>
-      <button className="absolute right-[43vh] -mt-[60vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
-          Agendar consultoría <span className="font-bold">GRATIS</span>
+  
+      <button className="absolute right-[20vh] -mt-[60vh]"><BoxReveal><ShinyButton className="futuristic-button">
+          B.AI AUTOMATION</ShinyButton></BoxReveal>
       </button>
-      <button className="absolute right-[41vh] -mt-[52vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
-          Agendar consultoría <span className="font-bold">GRATIS</span>
+    
+
+      <button className="absolute right-[20vh] -mt-[52vh]"><BoxReveal><ShinyButton className="futuristic-button">
+          Servicios</ShinyButton></BoxReveal>
       </button>
-      <button className="absolute right-[40vh] -mt-[44vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
-          Agendar consultoría <span className="font-bold">GRATIS</span>
+
+      <button className="absolute right-[20vh] -mt-[44vh]"><BoxReveal><ShinyButton className="futuristic-button">
+          Como Iniciar Con Nosotros</ShinyButton></BoxReveal>
       </button>
-      <button className="absolute right-[40vh] -mt-[36vh] bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
-          Agendar consultoría <span className="font-bold">GRATIS</span>
+
+
+      <button className="absolute right-[20vh] -mt-[36vh]"><BoxReveal><ShinyButton className="futuristic-button">
+          Beneficios</ShinyButton></BoxReveal>
       </button>
+
+      <button className="absolute right-[20vh] -mt-[28vh]"><BoxReveal><ShinyButton className="futuristic-button">
+          Preguntas Usuales</ShinyButton></BoxReveal>
+      </button>
+
+
       <div className="text-right">
         <h1 className="text-4xl ibm-plex-serif-thin font-bold mb-4 low-margin text-black">
           Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con IA

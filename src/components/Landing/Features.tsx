@@ -1,4 +1,6 @@
 import dashboard from '../../img/dashboard.png'
+import { ShinyButton } from '../magicui/shiny-button';
+
 export default function Features() {
   return (
     <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4 " >
@@ -43,10 +45,10 @@ export default function Features() {
               </li>
             </ul>
             <a href="https://cal.com/baiautomation/60-min-meeting">
-            <button className="bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/100">
-              Agendar consultoría <span className="font-bold">GRATIS</span>
+            <button className="bg-[#b89595] text-gray-100  px-6 py-3 mt-[2vh] rounded-lg hover:bg-[#e7cdcd] transition shadow-lg shadow-[#d4a5a5]/100"><ShinyButton>
+              Agendar consultoría <span className="font-bold">GRATIS</span></ShinyButton>
             </button>
-        </a>
+            </a>
           </div>
           <div>
             <img

@@ -14,6 +14,7 @@ import { Meteors } from '../magicui/meteors';
 import Logo from './Logo';
 import Video from './Video';
 import { PulsatingButton } from '../magicui/pulsating-button';
+import { RainbowButton } from '../magicui/rainbow-button';
 
 export type Square = {
   x: number;
@@ -105,7 +106,7 @@ function Home() {
           </div>
       </div>
       <div className="static-botton">
-      <PulsatingButton onClick={handleRedirect} pulseColor="#ff5733" duration="1.5s" className="static-botton">Probar Soluciones</PulsatingButton>    
+        <RainbowButton onClick={handleRedirect} className="static-botton">Probar Soluciones</RainbowButton>    
       </div>
     </div>
     );
@@ -139,7 +140,7 @@ function Home() {
                 <CallToAction />
             </div>
         </div>
-        <PulsatingButton onClick={handleRedirect} pulseColor="#ff5733" duration="1.5s" className="static-botton">Probar Soluciones</PulsatingButton>    
+        <RainbowButton onClick={handleRedirect} className="static-botton">Probar Soluciones</RainbowButton>    
     </div>
 );
 }

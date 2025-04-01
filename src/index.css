@@ -11,9 +11,50 @@
 .static-botton {
     position: fixed; /* Fija el botón en la pantalla */
     top: 1vh; /* Distancia desde la parte inferior */
-    right: 1vh; /* Distancia desde la derecha */
+    right: 1.5vh; /* Distancia desde la derecha */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
+
+
+.futuristic-button {
+    background-color: #edecec; /* Fondo transparente */
+    color: #00ffcc; /* Color del texto */
+    padding: 12px 24px; /* Espaciado interno */
+    border: 1px solid #aeaeae; /* Borde del botón */
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que se comporte como un bloque */
+    position: relative; /* Para el efecto de pseudo-elemento */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    transition: color 0.4s ease; /* Transición suave para el color */
+}
+
+.futuristic-button::before {
+    content: ''; /* Pseudo-elemento vacío */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    width: 300%; /* Aumentar el tamaño */
+    height: 300%; /* Aumentar el tamaño */
+    background: radial-gradient(circle, #df8664 0%, rgba(0, 255, 204, 0) 70%); /* Gradiente radial */
+    transition: transform 0.4s ease; /* Transición suave para el efecto */
+    transform: translate(-50%, -50%) scale(0); /* Escalar a 0 inicialmente */
+    border-radius: 50%; /* Bordes redondeados */
+    z-index: 0; /* Colocar detrás del texto */
+}
+
+.futuristic-button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Escalar al pasar el mouse */
+}
+
+.futuristic-button:hover {
+    color: #836a6a; /* Cambiar color del texto al pasar el mouse */
+}
+
+
 
 .margen-abajo{
     margin-bottom: 12vh !important;
@@ -152,6 +193,11 @@ iframe.bpFab {
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+        --color-1: 0 100% 63%;
+        --color-2: 270 100% 63%;
+        --color-3: 210 100% 63%;
+        --color-4: 195 100% 63%;
+        --color-5: 90 100% 63%;
     }
   .dark {
         --background: 0 0% 3.9%;
@@ -178,6 +224,11 @@ iframe.bpFab {
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+        --color-1: 0 100% 63%;
+        --color-2: 270 100% 63%;
+        --color-3: 210 100% 63%;
+        --color-4: 195 100% 63%;
+        --color-5: 90 100% 63%;
     }
 }
 
