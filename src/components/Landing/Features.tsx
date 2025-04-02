@@ -9,7 +9,7 @@ export default function Features() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="mb-8">
-              <div className="inline-block bg-[#586576] px-6 py-2 rounded-full mb-4">
+              <div className="inline-block bg-[#121213] px-6 py-2 rounded-full mb-4">
                 <span className="text-white font-semibold">Ahorra tiempo</span>
               </div>
             </div>
@@ -45,8 +45,10 @@ export default function Features() {
               </li>
             </ul>
             <a href="https://cal.com/baiautomation/60-min-meeting">
-            <button className="bg-[#b89595] text-gray-100  px-6 py-3 mt-[2vh] rounded-lg hover:bg-[#e7cdcd] transition shadow-lg shadow-[#d4a5a5]/100"><ShinyButton>
-              Agendar consultoría <span className="font-bold">GRATIS</span></ShinyButton>
+            <button className="bg-[#d5aaaa] text-gray-100 px-6 py-3 mt-[2vh] rounded-lg border border-black hover:bg-[#af7676] transition shadow-lg shadow-[#d4a5a5]/100">
+              <ShinyButton>
+                Agendar consultoría <span className="font-bold">GRATIS</span>
+              </ShinyButton>
             </button>
             </a>
           </div>

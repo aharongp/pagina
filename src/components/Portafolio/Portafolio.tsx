@@ -24,16 +24,17 @@ export default function Portafolio(){
     };
   }, []);
   return (
-    <div className="min-h-screen bg-[#f2f4f5] text-white ">
-      <div className="">
-        <div className="relative z-10 p-8">
-            <Meteors number={40} maxDuration={15}/>
-            <Header />
-            <Texto />
-            <Voz />
-        </div>
-      </div>
+<div className="min-h-screen bg-[#f2f4f5] text-white flex items-center justify-center">
+  <div className="relative z-10 p-8 flex flex-col items-center">
+    <Meteors number={40} maxDuration={15} />
+    <Header />
+    
+    <div className="flex flex-col items-center">
+      <Texto/>
+      <Voz />
     </div>
+  </div>
+</div>
   );
 }
 

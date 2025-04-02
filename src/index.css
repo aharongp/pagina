@@ -7,7 +7,6 @@
     margin-top: -10vh !important;
 }
 
-
 .static-botton {
     position: fixed; /* Fija el botón en la pantalla */
     top: 1vh; /* Distancia desde la parte inferior */
@@ -39,7 +38,7 @@
     left: 50%; /* Centrar horizontalmente */
     width: 300%; /* Aumentar el tamaño */
     height: 300%; /* Aumentar el tamaño */
-    background: radial-gradient(circle, #df8664 0%, rgba(0, 255, 204, 0) 70%); /* Gradiente radial */
+    background: radial-gradient(circle, #d4b7b7 0%, rgba(0, 255, 204, 0) 70%); /* Gradiente radial */
     transition: transform 0.4s ease; /* Transición suave para el efecto */
     transform: translate(-50%, -50%) scale(0); /* Escalar a 0 inicialmente */
     border-radius: 50%; /* Bordes redondeados */

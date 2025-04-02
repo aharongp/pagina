@@ -1,6 +1,9 @@
 import { Bot } from 'lucide-react';
 import { chatbotTexto } from './infoTexto';
 import { Link } from 'react-router-dom';
+import { BoxReveal } from '@/components/magicui/box-reveal';
+import { NeonGradientCard } from '@/components/magicui/neon-gradient-card';
+import { NeonGradientCard2 } from '@/components/magicui/neon-grading-card-2';
 
 export default function Texto() {
   return (
@@ -18,10 +21,10 @@ export default function Texto() {
         </p>
       </header>
 
-      <main className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <main className="container mx-auto px-12"><BoxReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {chatbotTexto.map((bot) => (
-            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col">
+            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform border border-black transition-transform duration-300 flex flex-col"><NeonGradientCard>
               <div className="h-48 overflow-hidden">
                 <img 
                   src={bot.image}
@@ -46,18 +49,18 @@ export default function Texto() {
                   ))}
                 </div>
               </div>
-              <div className="px-6 py-4 bg-gray-900 border-t border-gray-700 mt-auto">
+              <div><NeonGradientCard2>
                 <Link 
                   to={`/texto/${bot.id}`}
                   
-                  className="block w-full bg-[#b89595] text-gray-100 mt-5 px-6 py-3 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
+                  className="block w-full bg-[#b89595] text-gray-100  px-2 py-2 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
                 >
                   Ver más
-                </Link>
-              </div>
+                </Link></NeonGradientCard2>
+              </div></NeonGradientCard>
             </div>
           ))}
-        </div>
+        </div></BoxReveal>
       </main>
     </div>
   );

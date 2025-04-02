@@ -67,13 +67,13 @@ interface NeonGradientCardProps {
   [key: string]: any;
 }
 
-export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
+export const NeonGradientCard2: React.FC<NeonGradientCardProps> = ({
   className,
   children,
   borderSize = 1,
   borderRadius = 20,
   neonColors = {
-    firstColor: "#779c9b",
+    firstColor: "#458053",
     secondColor: "#c56666",
   },
   ...props

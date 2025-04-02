@@ -39,7 +39,7 @@ export default function Steps() {
         <h2 className="text-3xl text-black font-bold mb-10 flex justify-center"><span className="text-[#b89595]">¿</span>Cómo empezar<span className="text-[#b89595]">?</span></h2>
         <div className="grid md:grid-cols-2 mb-20 lg:grid-cols-4 gap-6 ">
           {steps.map((step) => (
-            <div key={step.number} className="bg-[#586576] drop-shadow-xl p-1 rounded-xl hover:scale-105 hover:bg-[#748396] transition"><NeonGradientCard>
+            <div key={step.number} className="bg-[#3d3d3d] drop-shadow-xl p-1 rounded-xl hover:scale-105 hover:bg-[#c0bdbd] transition"><NeonGradientCard>
               <div className="text-gray-800 font-bold text-xl mb-2"><span className="text-[#b89595]">{step.number}. </span> {step.title}</div>
               <p className="text-gray-600">{step.description}</p>
               </NeonGradientCard>
@@ -48,8 +48,10 @@ export default function Steps() {
         </div>
         <div className="text-center -mt-12">
       <a href="https://cal.com/baiautomation/60-min-meeting">
-      <button className="bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#e7cdcd] transition shadow-lg shadow-[#d4a5a5]/100"><ShinyButton>
-        Agendar consultoría <span className="font-bold">GRATIS</span></ShinyButton>
+      <button className="bg-[#d5aaaa] text-gray-100 px-6 py-3 rounded-lg border border-black hover:bg-[#af7676] transition shadow-lg shadow-[#d4a5a5]/100">
+        <ShinyButton>
+          Agendar consultoría <span className="font-bold">GRATIS</span>
+        </ShinyButton>
       </button>
       </a>
         </div>

@@ -10,8 +10,10 @@ export default function Video() {
       </div>
 
       <a href="https://cal.com/baiautomation/60-min-meeting">
-      <button className="bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#e7cdcd] transition shadow-lg shadow-[#d4a5a5]/100"><ShinyButton>
-        Agendar consultoría <span className="font-bold">GRATIS</span></ShinyButton>
+      <button className="bg-[#d5aaaa] text-gray-100 px-6 py-3 rounded-lg border border-black hover:bg-[#af7676] transition shadow-lg shadow-[#d4a5a5]/100">
+        <ShinyButton>
+          Agendar consultoría <span className="font-bold">GRATIS</span>
+        </ShinyButton>
       </button>
       </a>
     </div>

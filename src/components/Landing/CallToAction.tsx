@@ -18,7 +18,7 @@ export default function CallToAction() {
 
   return (
     <section className="section opacity-100 transform translate-y-10 transition-transform duration-1000 py-16 px-4 ease-linear ">
-      <div className="max-w-3xl mx-auto bg-[#949191] rounded-2xl p-1 text-center shadow-inner shadow-[#606162]/100"><NeonGradientCard>
+      <div className="max-w-3xl mx-auto  rounded-2xl p-1 text-center shadow-inner shadow-[#606162]/100"><NeonGradientCard>
         <h2 className="text-2xl font-bold mb-4 text-gray-800">
           ¿Listo para llevar tu negocio al siguiente nivel?
         </h2>
@@ -26,8 +26,10 @@ export default function CallToAction() {
           Experimenta cómo nunca lo has hecho negocio. Automatiza, escala, ahorra tiempo y dinero conectando todo tu negocio con IA.
         </p>
       <a href="https://cal.com/baiautomation/60-min-meeting">
-      <button className="bg-[#b89595] text-gray-100  px-6 py-3 rounded-lg hover:bg-[#e7cdcd] transition shadow-lg shadow-[#d4a5a5]/100"><ShinyButton>
-        Agendar consultoría <span className="font-bold">GRATIS</span></ShinyButton>
+      <button className="bg-[#d5aaaa] text-gray-100 px-6 py-3 rounded-lg border border-black hover:bg-[#af7676] transition shadow-lg shadow-[#d4a5a5]/100">
+        <ShinyButton>
+          Agendar consultoría <span className="font-bold">GRATIS</span>
+        </ShinyButton>
       </button>
       </a>
         <div className="flex justify-center items-center gap-4 mt-6">

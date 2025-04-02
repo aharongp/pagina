@@ -1,7 +1,7 @@
 import { Bot } from 'lucide-react';
 import { chatbotVoz } from './infoVoz';
 import { Link } from 'react-router-dom';
-
+import { BoxReveal } from '@/components/magicui/box-reveal';
 
 export default function Voz() {
 
@@ -20,7 +20,7 @@ export default function Voz() {
         </p>
       </header>
 
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4"><BoxReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {chatbotVoz.map((bot) => (
             <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col">
@@ -59,7 +59,7 @@ export default function Voz() {
               </div>
             </div>
           ))}
-        </div>
+        </div></BoxReveal>
       </main>
     </div>
   );
