@@ -41,7 +41,7 @@ export const chatbotTexto: ChatbotTexto[] = [
   {
     id: 2,
     name: "ResearchAssist",
-    description: "Un asistente de IA especializado en la generacion de contenido con las ultimas noticias sobre un tema especifico",
+    description: "Un asistente de IA especializado en la generacion de contenido con las ultimas noticias sobre un tema especifico, este modelo maneja contenido de la Formula 1.",
     capabilities: ["Busqueda en la web", "Automatización de Tareas", "Generacion de contenido"],
     icon: <Camera className="w-6 h-6" />,
     image: researchAssist,
@@ -71,7 +71,7 @@ export const chatbotTexto: ChatbotTexto[] = [
   {
     id: 2,
     name: "BAIAssist",
-    description: "Un asistente de IA especializado en el soporte al cliente con preguntas frecuentes y base de conocimientos",
+    description: "Un asistente de IA especializado en el soporte al cliente con preguntas frecuentes y base de conocimientos personalizados sobre una tienda en linea.",
     capabilities: ["Base de conocimientos", "FQA", "Transferir a un humano"],
     icon: <HandPlatter className="w-6 h-6" />,
     image: supportAssist,

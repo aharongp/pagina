@@ -24,8 +24,8 @@ export default function Texto() {
       <main className="container mx-auto px-12"><BoxReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {chatbotTexto.map((bot) => (
-            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform border border-black transition-transform duration-300 flex flex-col"><NeonGradientCard>
-              <div className="h-48 overflow-hidden">
+            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform border-2 border-black transition-transform duration-300 flex flex-col"><NeonGradientCard>
+              <div className="h-48 overflow-hidden border-2 border-gray-700 rounded-xl">
                 <img 
                   src={bot.image}
                   alt={bot.name}
@@ -49,14 +49,14 @@ export default function Texto() {
                   ))}
                 </div>
               </div>
-              <div><NeonGradientCard2>
+              <div>
                 <Link 
                   to={`/texto/${bot.id}`}
                   
-                  className="block w-full bg-[#b89595] text-gray-100  px-2 py-2 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
+                  className="block w-full bg-[#696969] text-gray-100  px-2 py-2 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
                 >
                   Ver más
-                </Link></NeonGradientCard2>
+                </Link>
               </div></NeonGradientCard>
             </div>
           ))}
