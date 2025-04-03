@@ -24,7 +24,7 @@ export default function Texto() {
       <main className="container mx-auto px-12"><BoxReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {chatbotTexto.map((bot) => (
-            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform border-2 border-black transition-transform duration-300 flex flex-col"><NeonGradientCard>
+            <div key={bot.id} className="bg-[#586576] rounded-xl overflow-hidden shadow-lg transform border-2 border-black transition-transform duration-300 flex flex-col"><NeonGradientCard2>
               <div className="h-48 overflow-hidden border-2 border-gray-700 rounded-xl">
                 <img 
                   src={bot.image}
@@ -37,13 +37,13 @@ export default function Texto() {
                   <div className="p-2 bg-[#b89595] rounded-lg mr-3">
                     {bot.icon}
                   </div>
-                  <h3 className="text-xl font-semibold">{bot.name}</h3>
+                  <h3 className="text-xl text-gray-700 font-semibold">{bot.name}</h3>
                 </div>
-                <p className="text-gray-400 mb-4">{bot.description}</p>
-                <div className="space-y-2">
+                <p className="text-gray-500 mb-4">{bot.description}</p>
+                <div className="space-y-2 text-gray-900" >
                   {bot.capabilities.map((capability:any, index:any) => (
                     <div key={index} className="flex items-center text-sm">
-                      <span className="w-2 h-2 bg-[#b89595] rounded-full mr-2" />
+                      <span className="w-2 h-2 bg-[#9e4235] rounded-full mr-2" />
                       <span>{capability}</span>
                     </div>
                   ))}
@@ -53,11 +53,11 @@ export default function Texto() {
                 <Link 
                   to={`/texto/${bot.id}`}
                   
-                  className="block w-full bg-[#696969] text-gray-100  px-2 py-2 rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
+                  className="block w-full bg-[#696969] text-gray-100  px-2 py-2 border-2 border-black rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
                 >
                   Ver más
                 </Link>
-              </div></NeonGradientCard>
+              </div></NeonGradientCard2>
             </div>
           ))}
         </div></BoxReveal>
