@@ -1,7 +1,7 @@
 import { CalendarCheck, Brain } from 'lucide-react';
 import { ChatbotVoz } from '../../../../types';
-import dentistassist from '../../../../img/dentistassist.jpeg';
-import appointmentSetter from '../../../../img/appointmentSetter.jpeg';
+import dentistassist from '../../../../img/dentistassist.webp';
+import appointmentSetter from '../../../../img/appointmentSetter.webp';
 
 
 export const chatbotVoz: ChatbotVoz[] = [
@@ -36,7 +36,7 @@ export const chatbotVoz: ChatbotVoz[] = [
   },
   {
     id: 2,
-    name: "AppointmentSetter",
+    name: "Setter",
     description: "Un chatbot especializado para campañas de marketing y agendar reuniones. A demas de hacer llamadas automáticas",
     capabilities: ["Voz en español", "Llamadas automaticas", "Integración de Base de datos"],
     icon: <CalendarCheck className="w-6 h-6" />,

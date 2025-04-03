@@ -1,8 +1,8 @@
 import { Camera, HandPlatter, Warehouse } from 'lucide-react';
 import { ChatbotTexto } from '../../../../types';
-import inmoassist from '../../../../img/inmoassist.png';
-import researchAssist from '../../../../img/researchAssist.jpeg';
-import supportAssist from '../../../../img/supportchatbot.jpeg';
+import inmoassist from '../../../../img/inmoassist.webp';
+import researchAssist from '../../../../img/researchAssist.webp';
+import supportAssist from '../../../../img/supportchatbot.webp';
 
 
 
@@ -40,7 +40,7 @@ export const chatbotTexto: ChatbotTexto[] = [
   },
   {
     id: 2,
-    name: "ResearchAssist",
+    name: "Research",
     description: "Un asistente de IA especializado en la generacion de contenido con las ultimas noticias sobre un tema especifico, este modelo maneja contenido de la Formula 1.",
     capabilities: ["Busqueda en la web", "Automatización de Tareas", "Generacion de contenido"],
     icon: <Camera className="w-6 h-6" />,

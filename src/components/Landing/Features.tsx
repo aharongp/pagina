@@ -1,4 +1,4 @@
-import dashboard from '../../img/dashboard.png'
+import dashboard from '../../img/dashboard.webp'
 import { ShinyButton } from '../magicui/shiny-button';
 
 export default function Features() {

@@ -3,8 +3,11 @@ import Header from "./Header";
 import Texto from "./chatbots/texto/texto";
 import Voz from "./chatbots/voz/voz";
 import { Meteors } from "../magicui/meteors";
+import { useWindowSize } from "../Landing/Home";
 
 export default function Portafolio(){
+  const { width } = useWindowSize();
+  
   useEffect(() => {
 
     const handleScroll = () => {
@@ -23,6 +26,22 @@ export default function Portafolio(){
       document.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  if(width <600){
+    return(
+      <div className="min-h-screen bg-[#f2f4f5] text-white flex items-center justify-center">
+        <div className="relative z-10 p-8 flex flex-col items-center">
+          <Header />
+          <div className="flex flex-col items-center">
+            <Texto/>
+            <Voz />
+          </div>
+      </div>
+    </div>
+    );
+  }
+
+
+
   return (
 <div className="min-h-screen bg-[#f2f4f5] text-white flex items-center justify-center">
   <div className="relative z-10 p-8 flex flex-col items-center">
