@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { BoxReveal } from '@/components/magicui/box-reveal';
 import { NeonGradientCard2 } from '@/components/magicui/neon-grading-card-2';
 export default function Voz() {
-
   return (
     <div className="min-h-screen text-white">
       {/* Header */}
@@ -50,7 +49,7 @@ export default function Voz() {
               </div>
               <div>
                 <Link 
-                  to={`/texto/${bot.id}`}
+                  to={`/voz/${bot.id}`}
                   
                   className="block w-full bg-[#696969] text-gray-100  px-2 py-2 border-2 border-black rounded-lg hover:bg-[#4b1515] transition shadow-lg shadow-[#d4a5a5]/20 text-center"
                 >

@@ -130,7 +130,6 @@ function Home() {
             <div className="relative z-10 p-8">
                 <Logo />
                 <Header/>
-                
                 <Video />
                 <Services />
                 <Features />

@@ -3,7 +3,7 @@ import { ShinyButton } from '../magicui/shiny-button';
 
 export default function Features() {
   return (
-    <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4 " >
+    <section id='beneficios' className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4 " >
       <div className="max-w-6xl mx-auto">
 
         <div className="grid md:grid-cols-2 gap-12 items-center">

@@ -34,7 +34,7 @@ export default function Steps() {
   ];
 
   return (
-    <section className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
+    <section id="inicia" className="section opacity-0 transform translate-y-10 transition-transform duration-1000 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl text-black font-bold mb-10 flex justify-center"><span className="text-[#b89595]">¿</span>Cómo empezar<span className="text-[#b89595]">?</span></h2>
         <div className="grid md:grid-cols-2 mb-20 lg:grid-cols-4 gap-6 ">

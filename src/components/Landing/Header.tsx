@@ -26,27 +26,35 @@ export default function Header() {
         <Comentarios /></BoxReveal>
       </div>
   
-      <button className="absolute right-[20vh] -mt-[60vh]"><BoxReveal><ShinyButton className="futuristic-button">
-          B.AI AUTOMATION</ShinyButton></BoxReveal>
-      </button>
+      <a href="#video">
+        <button className="absolute right-[42vh] -mt-[60vh]"><BoxReveal><ShinyButton className="futuristic-button">
+            B.AI AUTOMATION</ShinyButton></BoxReveal>
+        </button>
+      </a>
     
+      <a href="#servicios">
+        <button className="absolute right-[40vh] -mt-[52vh]"><BoxReveal><ShinyButton className="futuristic-button">
+            Servicios</ShinyButton></BoxReveal>
+        </button>
+      </a>
 
-      <button className="absolute right-[20vh] -mt-[52vh]"><BoxReveal><ShinyButton className="futuristic-button">
-          Servicios</ShinyButton></BoxReveal>
-      </button>
+      <a href="#inicia">
+        <button className="absolute right-[30vh] -mt-[44vh]"><BoxReveal><ShinyButton className="futuristic-button">
+            Como Iniciar Con Nosotros</ShinyButton></BoxReveal>
+        </button>
+      </a>
 
-      <button className="absolute right-[20vh] -mt-[44vh]"><BoxReveal><ShinyButton className="futuristic-button">
-          Como Iniciar Con Nosotros</ShinyButton></BoxReveal>
-      </button>
+      <a href="#beneficios">
+        <button className="absolute right-[40vh] -mt-[36vh]"><BoxReveal><ShinyButton className="futuristic-button">
+            Beneficios</ShinyButton></BoxReveal>
+        </button>
+      </a>
 
-
-      <button className="absolute right-[20vh] -mt-[36vh]"><BoxReveal><ShinyButton className="futuristic-button">
-          Beneficios</ShinyButton></BoxReveal>
-      </button>
-
-      <button className="absolute right-[20vh] -mt-[28vh]"><BoxReveal><ShinyButton className="futuristic-button">
-          Preguntas Usuales</ShinyButton></BoxReveal>
-      </button>
+      <a href="#FQA">
+        <button className="absolute right-[42vh] -mt-[28vh]"><BoxReveal><ShinyButton className="futuristic-button">
+            Preguntas Usuales</ShinyButton></BoxReveal>
+        </button>
+      </a>
 
 
       <div className="text-right">

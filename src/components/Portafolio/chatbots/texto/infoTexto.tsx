@@ -69,7 +69,7 @@ export const chatbotTexto: ChatbotTexto[] = [
     src2: "https://files.bpcontent.cloud/2025/03/31/00/20250331000634-Y1FDBM3T.js"
   },
   {
-    id: 2,
+    id: 3,
     name: "BAIAssist",
     description: "Un asistente de IA especializado en el soporte al cliente con preguntas frecuentes y base de conocimientos personalizados sobre una tienda en linea.",
     capabilities: ["Base de conocimientos", "FQA", "Transferir a un humano"],
