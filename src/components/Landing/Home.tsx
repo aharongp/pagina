@@ -96,7 +96,9 @@ function Home() {
           <div className="relative z-10 p-8">
               <Logo />
               <Header/>
-              <Video />
+              <div className='mt-12'>
+                <Video />
+              </div>
               <Services />
               <Features />
               <Analytics />
