@@ -1,7 +1,4 @@
 import { ShinyButton } from "../magicui/shiny-button";
-import { NeonGradientCard } from "../magicui/neon-gradient-card";
-
-
 export default function Video() {
   return (
     <div id="video" className="text-center">

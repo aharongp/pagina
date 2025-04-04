@@ -2,7 +2,6 @@ import { Bot } from 'lucide-react';
 import { chatbotTexto } from './infoTexto';
 import { Link } from 'react-router-dom';
 import { BoxReveal } from '@/components/magicui/box-reveal';
-import { NeonGradientCard } from '@/components/magicui/neon-gradient-card';
 import { NeonGradientCard2 } from '@/components/magicui/neon-grading-card-2';
 
 export default function Texto() {

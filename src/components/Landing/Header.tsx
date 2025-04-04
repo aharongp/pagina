@@ -22,7 +22,7 @@ export default function Header() {
   }
   return (
     <header className="text-center -mt-32" >
-      <div className="flex-none w-1/4 p-30 ml-10"><BoxReveal>{/* Ajusta el ancho según sea necesario */}
+      <div className="flex-none w-1/4 p-30 ml-10"><BoxReveal>
         <Comentarios /></BoxReveal>
       </div>
   

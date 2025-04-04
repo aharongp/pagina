@@ -13,7 +13,6 @@ import { Globe } from '../magicui/globe';
 import { Meteors } from '../magicui/meteors';
 import Logo from './Logo';
 import Video from './Video';
-import { PulsatingButton } from '../magicui/pulsating-button';
 import { RainbowButton } from '../magicui/rainbow-button';
 
 export type Square = {

@@ -1,21 +1,7 @@
-//import { useState } from 'react';
-//import { Navigate } from 'react-router-dom';
 import { ShinyButton } from '../magicui/shiny-button';
 import logo from '../../img/logo13.svg';
 import { NeonGradientCard } from '../magicui/neon-gradient-card';
 export default function CallToAction() {
-
-//const [redirect, setRedirect] = useState(false);
-
-  //const handleRedirect = () => {
-    //  setRedirect(true);
- // };
-
- // if (redirect) {
- //     return <Navigate to="/Portafolio" />;
-//}
- 
-
   return (
     <section className="section opacity-100 transform translate-y-10 transition-transform duration-1000 py-16 px-4 ease-linear ">
       <div className="max-w-3xl mx-auto  rounded-2xl p-1 text-center shadow-inner shadow-[#606162]/100"><NeonGradientCard>
@@ -86,8 +72,6 @@ export default function CallToAction() {
         </div>
         </NeonGradientCard>
       </div>
-
-
     </section>
 
   );

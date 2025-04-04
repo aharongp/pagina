@@ -3,7 +3,6 @@ import { ArrowLeft, CheckCircle, Target, Cpu } from 'lucide-react';
 import { chatbotTexto } from './infoTexto';
 import { useEffect, useState } from 'react';
 import { Square, useWindowSize } from '../../../Landing/Home';
-import { NeonGradientCard } from '@/components/magicui/neon-gradient-card';
 
 
 export default function ChatbotTextoDetail() {

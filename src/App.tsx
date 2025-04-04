@@ -1,10 +1,9 @@
 import Portafolio from './components/Portafolio/Portafolio';
-import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Landing/Home';
 import ChatbotTextoDetail from './components/Portafolio/chatbots/texto/textoDetails';
 import ChatbotVozDetail from './components/Portafolio/chatbots/voz/vozDetails';
 import ScriptTexto from './components/Portafolio/chatbots/texto/script';
-import Prueba from './components/prueba';
 
 
 
@@ -17,7 +16,6 @@ function App() {
             <Route path="/portafolio" element={<Portafolio />} />
             <Route path="/texto/:id" element={<ChatbotTextoDetail />} />
             <Route path="/voz/:id" element={<ChatbotVozDetail />} />
-            <Route path="/prueba" element={<Prueba />} />
         </Routes>
         <ScriptTexto/>
       </div>

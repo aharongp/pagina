@@ -29,7 +29,7 @@ export default function Portafolio(){
   if(width <600){
     return(
       <div className="min-h-screen bg-[#f2f4f5] text-white flex items-center justify-center">
-        <div className="relative z-10 p-8 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-center">
           <Header />
           <div className="flex flex-col items-center">
             <Texto/>
@@ -40,14 +40,11 @@ export default function Portafolio(){
     );
   }
 
-
-
   return (
 <div className="min-h-screen bg-[#f2f4f5] text-white flex items-center justify-center">
   <div className="relative z-10 p-8 flex flex-col items-center">
     <Meteors number={40} maxDuration={15} />
     <Header />
-    
     <div className="flex flex-col items-center">
       <Texto/>
       <Voz />

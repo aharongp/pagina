@@ -119,7 +119,7 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
           "--pseudo-element-background-image": `linear-gradient(0deg, ${neonColors.firstColor}, ${neonColors.secondColor})`,
           "--pseudo-element-width": `${dimensions.width + borderSize * 2}px`,
           "--pseudo-element-height": `${dimensions.height + borderSize * 2}px`,
-          "--after-blur": `${dimensions.width / 3}px`,
+          "--after-blur": `${dimensions.width / 150}px`,
         } as CSSProperties
       }
       className={cn(
@@ -133,12 +133,10 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
           "relative size-full min-h-[inherit] rounded-[var(--card-content-radius)] bg-gray-300 p-6",
           "before:absolute before:-left-[var(--border-size)] before:-top-[var(--border-size)] before:-z-10 before:block",
           "before:h-[var(--pseudo-element-height)] before:w-[var(--pseudo-element-width)] before:rounded-[var(--border-radius)] before:content-['']",
-          "before:bg-[linear-gradient(0deg,var(--neon-first-color),var(--neon-second-color))] before:bg-[length:100%_200%]",
-          "before:animate-background-position-spin",
+          "before:bg-[linear-gradient(0deg,var(--neon-first-color),var(--neon-second-color))] before:bg-[length:1%]",
           "after:absolute after:-left-[var(--border-size)] after:-top-[var(--border-size)] after:-z-10 after:block",
           "after:h-[var(--pseudo-element-height)] after:w-[var(--pseudo-element-width)] after:rounded-[var(--border-radius)] after:blur-[var(--after-blur)] after:content-['']",
-          "after:bg-[linear-gradient(0deg,var(--neon-first-color),var(--neon-second-color))] after:bg-[length:100%_200%] after:opacity-80",
-          "after:animate-background-position-spin",
+          "after:bg-[linear-gradient(0deg,var(--neon-first-color),var(--neon-second-color))] after:bg-[length:1%] after:opacity-80",
           "dark:bg-neutral-900",
         )}
       >
