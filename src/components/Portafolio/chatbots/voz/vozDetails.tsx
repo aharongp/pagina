@@ -36,23 +36,16 @@ export default function ChatbotVozDetail() {
         console.log("call ended");
         setIsCalling(false);
       });
-      
-      // When agent starts talking for the utterance
-      // useful for animation
+
       retellWebClient.on("agent_start_talking", () => {
         console.log("agent_start_talking");
       });
-      
-      // When agent is done talking for the utterance
-      // useful for animation
+
       retellWebClient.on("agent_stop_talking", () => {
         console.log("agent_stop_talking");
       });
       
-      
-      // Update message such as transcript
-      // You can get transcrit with update.transcript
-      // Please note that transcript only contains last 5 sentences to avoid the payload being too large
+
       const handleUpdate = (update: { transcript: TranscriptItem[] }) => {
         if (update.transcript) {
           setTranscript(update.transcript);
@@ -63,27 +56,9 @@ export default function ChatbotVozDetail() {
       
       retellWebClient.on("error", (error) => {
         console.error("An error occurred:", error);
-        // Stop the call
         retellWebClient.stopCall();
       });
 
-      const generateRandomSquares = (num: number) => {
-        const newSquares: Square[] = [];
-        for (let i = 0; i < num; i++) {
-          const x = Math.floor(Math.random() * (width -25)); // Ajusta según el tamaño del contenedor
-          if(width < 600){
-            const y = Math.floor(Math.random() * 1500); // Ajusta según el tamaño del contenedor
-            newSquares.push({ x, y });
-  
-          }else{
-            const y = Math.floor(Math.random() * 900); // Ajusta según el tamaño del contenedor
-            newSquares.push({ x, y });
-          }
-        }
-        setSquares(newSquares as never[]);
-      };
-  
-      generateRandomSquares(200); // Genera 10 cuadrados aleatorios
   
       const handleScroll = () => {
         const sections = document.querySelectorAll('section');
@@ -108,7 +83,6 @@ export default function ChatbotVozDetail() {
       };
     }, []);
 
-  
     const toggleConversation = async () => {
       if (isCalling) {
         retellWebClient.stopCall();
@@ -120,24 +94,20 @@ export default function ChatbotVozDetail() {
               accessToken: registerCallResponse.access_token,
             })
             .catch(console.error);
-          setIsCalling(true); // Update button to "Stop" when conversation starts
+          setIsCalling(true);
         }
       }
     };
   
     async function registerCall(agentId: string): Promise<RegisterCallResponse> {
       try {
-        // Update the URL to match the new backend endpoint you created
         const response = await fetch("https://backend-call-chatbots.onrender.com/create-web-call", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            agent_id: agentId, // Pass the agentId as agent_id
-            // You can optionally add metadata and retell_llm_dynamic_variables here if needed
-            // metadata: { your_key: "your_value" },
-            // retell_llm_dynamic_variables: { variable_key: "variable_value" }
+            agent_id: agentId, 
           }),
         });
     
@@ -221,7 +191,7 @@ export default function ChatbotVozDetail() {
               </div>
               <h1 className="text-4xl font-bold">{chatbot.name}</h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-2xl">{chatbot.description}</p>
+            <p className="text-xl text-gray-300 max-w-2xl">{chatbot.description} <br /> <span className="font-bold">**La llamada puede tardar unos segundos en cargarse, por favor espere**</span></p>
           </div>
         </div>
       </div>

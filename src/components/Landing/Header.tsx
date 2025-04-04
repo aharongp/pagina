@@ -27,31 +27,31 @@ export default function Header() {
       </div>
   
       <a href="#video">
-        <button className="absolute right-[42vh] -mt-[60vh]"><BoxReveal><ShinyButton className="futuristic-button">
+        <button className="absolute right-[42vh] -mt-[48vh]"><BoxReveal><ShinyButton className="futuristic-button">
             B.AI AUTOMATION</ShinyButton></BoxReveal>
         </button>
       </a>
     
       <a href="#servicios">
-        <button className="absolute right-[40vh] -mt-[52vh]"><BoxReveal><ShinyButton className="futuristic-button">
+        <button className="absolute right-[40vh] -mt-[40vh]"><BoxReveal><ShinyButton className="futuristic-button">
             Servicios</ShinyButton></BoxReveal>
         </button>
       </a>
 
       <a href="#inicia">
-        <button className="absolute right-[30vh] -mt-[44vh]"><BoxReveal><ShinyButton className="futuristic-button">
+        <button className="absolute right-[30vh] -mt-[32vh]"><BoxReveal><ShinyButton className="futuristic-button">
             Como Iniciar Con Nosotros</ShinyButton></BoxReveal>
         </button>
       </a>
 
       <a href="#beneficios">
-        <button className="absolute right-[40vh] -mt-[36vh]"><BoxReveal><ShinyButton className="futuristic-button">
+        <button className="absolute right-[40vh] -mt-[24vh]"><BoxReveal><ShinyButton className="futuristic-button">
             Beneficios</ShinyButton></BoxReveal>
         </button>
       </a>
 
       <a href="#FQA">
-        <button className="absolute right-[42vh] -mt-[28vh]"><BoxReveal><ShinyButton className="futuristic-button">
+        <button className="absolute right-[42vh] -mt-[16vh]"><BoxReveal><ShinyButton className="futuristic-button">
             Preguntas Usuales</ShinyButton></BoxReveal>
         </button>
       </a>

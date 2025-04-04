@@ -37,7 +37,7 @@ export const chatbotVoz: ChatbotVoz[] = [
   {
     id: 2,
     name: "Setter",
-    description: "Un chatbot especializado para campañas de marketing y agendar reuniones. A demas de hacer llamadas automáticas",
+    description: "Un chatbot especializado para campañas de marketing y agendar reuniones.",
     capabilities: ["Voz en español", "Llamadas automaticas", "Integración de Base de datos"],
     icon: <CalendarCheck className="w-6 h-6" />,
     image: appointmentSetter,
