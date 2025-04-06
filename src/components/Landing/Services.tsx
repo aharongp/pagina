@@ -11,17 +11,17 @@ export default function Services() {
     {
       icon: Zap,
       title: 'Automatizaciones',
-      description: 'Ahorra tiempo y mejora tu productividad automatizando'
+      description: 'Ahorra tiempo y mejora tu productividad automatizando tus procesos repetitivos'
     },
     {
       icon: BarChart3,
-      title: 'Marketing Ads y SEO',
-      description: 'Potencia tu negocio, mejora tus ventas y tu conversion'
+      title: 'Desarrollo de Software',
+      description: 'Crea el sistema o aplicacion perfecto para tu negocio'
     },
     {
       icon: Code,
       title: 'Sitios web y APPs',
-      description: 'Mejora tu sitio web para que enganche a tu cliente. O sube al siguiente nivel e implementa una APP'
+      description: 'Mejora tu sitio web para que enganche a tu cliente o sube al siguiente nivel e implementa una APP'
     }
   ];
 

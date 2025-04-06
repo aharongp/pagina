@@ -21,7 +21,7 @@ export default function Features() {
               <br />
               <span className="text-[#b89595]">trabajo con IA</span>
             </h2>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-500 mb-6">
               Reducir los errores y tener más eficiencia aumentará la productividad de tu empresa y podrás invertir el tiempo en lo que realmente importa
             </p>
             <ul className="space-y-4">
@@ -35,7 +35,7 @@ export default function Features() {
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                 </svg>
-                Automatizable
+                Escalable
               </li>
               <li className="flex items-center text-black">
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

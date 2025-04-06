@@ -13,8 +13,8 @@ export default function Steps() {
   const steps: Step[] = [
     {
       number: "1",
-      title: "Agenda tu llamada",
-      description: "Agenda una consultoría con uno de nuestros expertos en IA"
+      title: "Agenda tu llamada con nosotros",
+      description: "Agenda una consultoría con uno de nuestros expertos"
     },
     {
       number: "2",
@@ -29,7 +29,7 @@ export default function Steps() {
     {
       number: "4",
       title: "Último paso",
-      description: "Implementación de las soluciones para empezar rápidamente y posible test integral"
+      description: "Implementación de las soluciones para empezar rápidamente y lograr tu objetivo"
     }
   ];
 

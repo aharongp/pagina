@@ -1,5 +1,5 @@
 import { Brain, BarChart2, TrendingUp } from 'lucide-react';
-import analytics from '../../img/unlock.webp';
+import analytics from '../../img/unlock3.png';
 import { NeonGradientCard } from '../magicui/neon-gradient-card';
 
 export default function Analytics() {
@@ -49,7 +49,7 @@ export default function Analytics() {
               <NeonGradientCard className="flex items-center p-0.5 hover:bg-[#748396] ">
                 <span className="flex items-center">
                   <TrendingUp  className="w-6 h-6 text-[#458053] flex-shrink-0" />
-                  <span className="ml-3">Sube de leads más rápido y con el típico hipnotismo del marketing con IA</span>
+                  <span className="ml-3">Sube de leads más rápido con ayuda del marketing inteligente</span>
                 </span>
               </NeonGradientCard>
             </div>

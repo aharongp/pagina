@@ -1,48 +1,58 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from '../magicui/marquee';
+import ft1h from '../../img/ft1h.jpg';
+import ft1w from '../../img/ft1w.png';
+import ft2h from '../../img/ft2h.jpg';
+import ft2w from '../../img/ft2w.jpeg';
+import ft3h from '../../img/ft3h.jpeg';
+import ft4h from '../../img/ft4h.jpeg';
+import ft3w from '../../img/ft3w.jpg';
+import ft5h from '../../img/ft5h.jpeg';
+
+
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
+    name: "Manuel",
+    username: "",
     body: "Tardo demasiado agregando columnas a Excel. Necesito una solución que me ayude a automatizar esto.",
-    img: "https://avatar.vercel.sh/jack"
+    img: ft1h
   },
   {
-    name: "Jill",
-    username: "@jill",
+    name: "Samantha",
+    username: "",
     body: "Ya tengo 6 personas contestando WhatsApps, necesito una solución que gestione esto de manera más eficiente.",
-    img: "https://avatar.vercel.sh/jill"
+    img: ft1w
   },
   {
-    name: "John",
-    username: "@john",
+    name: "Paolo",
+    username: "",
     body: "La gestión de datos es un caos. Necesito una herramienta que me ayude a organizar todo más rápido.",
-    img: "https://avatar.vercel.sh/john"
+    img: ft2h
   },
   {
-    name: "Alice",
-    username: "@alice",
+    name: "Alicia",
+    username: "",
     body: "Mis campañas de marketing son muy lentas. Quiero una solución de IA que optimice el proceso.",
-    img: "https://avatar.vercel.sh/alice"
+    img: ft2w
   },
   {
-    name: "Bob",
-    username: "@bob",
+    name: "Guillermo",
+    username: "",
     body: "La atención al cliente me consume mucho tiempo. Necesito un chatbot que responda automáticamente.",
-    img: "https://avatar.vercel.sh/bob"
+    img: ft3h
   },
   {
-    name: "Charlie",
-    username: "@charlie",
+    name: "Jorge",
+    username: "",
     body: "No puedo seguir el ritmo de las redes sociales. Busco una herramienta que gestione mis publicaciones automáticamente.",
-    img: "https://avatar.vercel.sh/charlie"
+    img: ft4h
   },
   {
     name: "Diana",
-    username: "@diana",
+    username: "",
     body: "La recopilación de datos es tediosa. Quiero una solución que lo haga por mí y me dé análisis en tiempo real.",
-    img: "https://avatar.vercel.sh/diana"
+    img: ft3w
   }
 ];
 
@@ -69,7 +79,7 @@ const ReviewCard = ({
     )}
 >
     <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full border border-gray-300 " width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
             <figcaption className="text-sm font-medium">
                 {name}
