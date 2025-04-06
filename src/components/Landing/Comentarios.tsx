@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from '../magicui/marquee';
-import ft1h from '../../img/ft1h.jpg';
-import ft1w from '../../img/ft1w.png';
-import ft2h from '../../img/ft2h.jpg';
-import ft2w from '../../img/ft2w.jpeg';
-import ft3h from '../../img/ft3h.jpeg';
-import ft4h from '../../img/ft4h.jpeg';
-import ft3w from '../../img/ft3w.jpg';
-import ft5h from '../../img/ft5h.jpeg';
+import ft1h from '../../img/ft1h.webp';
+import ft1w from '../../img/ft1w.webp';
+import ft2h from '../../img/ft2h.webp';
+import ft2w from '../../img/ft2w.webp';
+import ft3h from '../../img/ft3h.webp';
+import ft4h from '../../img/ft4h.webp';
+import ft3w from '../../img/ft3w.webp';
 
 
 
