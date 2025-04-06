@@ -9,7 +9,7 @@ export default function CallToAction() {
           ¿Listo para llevar tu negocio al siguiente nivel?
         </h2>
         <p className="text-gray-600 mb-8">
-          Experimenta cómo nunca lo has hecho negocio. Automatiza, escala, ahorra tiempo y dinero conectando todo tu negocio con IA.
+          Experimenta cómo nunca lo has hecho negocio. Automatiza, escala, ahorra tiempo y dinero conectando todo tu negocio con IA. En bai automation agency estamos para ayudarte
         </p>
       <a href="https://cal.com/baiautomation/60-min-meeting">
       <button className="bg-[#d5aaaa] text-gray-100 px-6 py-3 rounded-lg border border-black hover:bg-[#af7676] transition shadow-lg shadow-[#d4a5a5]/100">

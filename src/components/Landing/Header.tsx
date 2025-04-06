@@ -10,7 +10,7 @@ export default function Header() {
     return (
       <header className="text-center">
         <h1 className="text-4xl ibm-plex-serif-thin font-bold mb-4 low-margin text-black">
-          Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con IA
+        Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con agentes de inteligencia artificial
         </h1>
         <p className="text-gray-600 mb-8 ">
           Te ayudamos a automatizar tareas repetitivas de tu negocio, ahorrar
@@ -28,7 +28,7 @@ export default function Header() {
   
       <a href="#video">
         <button className="absolute right-[42vh] -mt-[48vh]"><BoxReveal><ShinyButton className="futuristic-button">
-            B.AI AUTOMATION</ShinyButton></BoxReveal>
+            BAI AUTOMATION</ShinyButton></BoxReveal>
         </button>
       </a>
     
@@ -59,7 +59,7 @@ export default function Header() {
 
       <div className="text-right">
         <h1 className="text-4xl ibm-plex-serif-thin font-bold mb-4 low-margin text-black">
-          Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con IA
+          Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con <br />agentes de inteligencia artificial
         </h1>
         <p className="text-gray-600 mb-8 ">
           Te ayudamos a automatizar tareas repetitivas de tu negocio, ahorrar
