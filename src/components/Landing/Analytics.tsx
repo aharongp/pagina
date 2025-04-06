@@ -9,10 +9,6 @@ export default function Analytics() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center order-2 md:order-1">
             <div className="relative">
-              {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full animate-pulse"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                 <Brain className="w-32 h-32 text-blue-500" />
-              </div> */}
                 <img src={analytics} alt="Unlock image" className=''/>
             </div>
           </div>
