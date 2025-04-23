@@ -9,7 +9,7 @@ export default function Analytics() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center order-2 md:order-1">
             <div className="relative">
-                <img src={analytics} alt="Unlock image" className=''/>
+                <img src={analytics} alt="Unlock image"/>
             </div>
           </div>
           <div className="order-1 md:order-2">
@@ -56,3 +56,4 @@ export default function Analytics() {
     </section>
   );
 }
+

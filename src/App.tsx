@@ -4,6 +4,7 @@ import Home from './components/Landing/Home';
 import ChatbotTextoDetail from './components/Portafolio/chatbots/texto/textoDetails';
 import ChatbotVozDetail from './components/Portafolio/chatbots/voz/vozDetails';
 import ScriptTexto from './components/Portafolio/chatbots/texto/script';
+import Libro from './components/Campañas/Libro';
 
 
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portafolio" element={<Portafolio />} />
+            <Route path="/10-claves" element={<Libro />} />
             <Route path="/texto/:id" element={<ChatbotTextoDetail />} />
             <Route path="/voz/:id" element={<ChatbotVozDetail />} />
         </Routes>
