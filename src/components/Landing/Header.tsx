@@ -20,6 +20,30 @@ export default function Header() {
       </header>
     );
   }
+
+  if ((600 < width) && (width < 1500)){
+    return (
+      <header className="text-center -mt-32" >
+
+
+      <div className="text-center mt-[45vh]" >
+        <h1 className="text-4xl ibm-plex-serif-thin font-bold mb-4 low-margin text-black">
+          Te ahorramos <span className="text-[#552f3b]">horas</span> de trabajo con <br />Agentes de Inteligencia Artificial
+        </h1>
+        <p className="text-gray-600 mb-8 ">
+          Te ayudamos a automatizar tareas repetitivas de tu negocio, ahorrar
+          <br />
+          horas de trabajo y costos
+        </p>
+      </div>
+
+      <div style={{ height: "30vh" }} />
+    </header>
+    );
+  }
+
+
+
   return (
     <header className="text-center -mt-32" >
       <div className="flex-none w-1/4 p-30 ml-10 mt-10"><BoxReveal>

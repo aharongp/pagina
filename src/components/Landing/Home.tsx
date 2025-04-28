@@ -115,6 +115,7 @@ function Home() {
     );
   }
 
+
   return (
     <div className="min-h-screen bg-[#f2f4f5] text-white flex">
         <AnimatedGridPattern

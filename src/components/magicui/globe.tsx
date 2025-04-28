@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 const MOVEMENT_DAMPING = 1400;
 
+
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
@@ -57,6 +58,7 @@ export function Globe({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
+
 
   const r = useMotionValue(0);
   const rs = useSpring(r, {

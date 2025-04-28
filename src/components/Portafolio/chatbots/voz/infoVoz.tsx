@@ -32,7 +32,7 @@ export const chatbotVoz: ChatbotVoz[] = [
       respuesta: "<1100ms",
       precision: "89%"
     },
-    agentId: 'agent_bfdc2ed2ba09c069c7a1c8967a'
+    agentId: 'agent_c15c70384428e6a3bb21fc1fc8'
   },
   {
     id: 2,
@@ -64,6 +64,6 @@ export const chatbotVoz: ChatbotVoz[] = [
       respuesta: "<1000ms",
       precision: "87%"
     },
-    agentId: 'agent_e3eb0782eeb4396ce325f30ef3'
+    agentId: 'agent_c15c70384428e6a3bb21fc1fc8'
   }
 ];

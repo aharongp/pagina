@@ -4,7 +4,7 @@ import Home from './components/Landing/Home';
 import ChatbotTextoDetail from './components/Portafolio/chatbots/texto/textoDetails';
 import ChatbotVozDetail from './components/Portafolio/chatbots/voz/vozDetails';
 import ScriptTexto from './components/Portafolio/chatbots/texto/script';
-import Libro from './components/Campañas/Libro';
+import Libro from './components/Campañas/10claves/Libro';
 
 
 

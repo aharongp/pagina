@@ -1,46 +1,25 @@
 import { BookOpen, Clock, Download, CheckCircle } from 'lucide-react';
-import libro from "../../img/libro.webp"
+import libro from "../../../img/libro.webp"
 import { Timer } from './Timer';
 import { useState } from 'react';
+import AddressForm from './AddressForm';
 
 function Libro() {
-  // Estados para controlar la ventana modal y los datos del formulario
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
 
-  // Función para manejar el cambio en los inputs
-  const handleInputChange = (e:any) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Función para manejar la descarga del PDF
   const handleDownload = () => {
-    // Aquí puedes validar los datos del formulario si es necesario
-    if (!formData.name || !formData.email) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
-
-    // Simular la descarga de un archivo PDF
     const link = document.createElement("a");
-    link.href = "/ruta-del-libro.pdf"; // Cambia esto por la ruta real de tu archivo PDF
-    link.download = "libro.pdf";
+    link.href = "../../../img/10-claves-para-automatizar-tu-negocio.pdf";
+    link.download = "10-claves-para-automatizar-tu-negocio.pdf";
     link.click();
 
-    // Cerrar la ventana modal después de la descarga
     setIsModalOpen(false);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
-      {/* Hero Section */}
       <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left Column */}
           <div className="flex-1 text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
               <BookOpen className="w-6 h-6 text-[#d5aaaa]" />
@@ -53,7 +32,7 @@ function Libro() {
               Obten GRATIS una copia que te ayudara a mejorar la productividad en tu negocio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-[#d5aaaa] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-purple-700 transition-colors">
+              <button onClick={() => setIsModalOpen(true)} className="bg-[#d5aaaa] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-purple-700 transition-colors">
                 <Download className="w-5 h-5" />
                 Descargar Ahora
               </button>
@@ -67,7 +46,6 @@ function Libro() {
             </div>
           </div>
           
-          {/* Right Column */}
           <div className="flex-1">
             <img
               src={libro}
@@ -77,7 +55,6 @@ function Libro() {
           </div>
         </div>
 
-        {/* Features Section */}
         <div className="mt-24 grid md:grid-cols-3 gap-8">
           {[
             {
@@ -115,60 +92,16 @@ function Libro() {
       </div>
       {/* Ventana modal */}
       {isModalOpen && (
-        <div style={modalStyles}>
-          <div style={modalContentStyles}>
-            <h2>Ingresa tus datos</h2>
-            <form>
-              <div>
-                <label>Nombre:</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label>Email:</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <button type="button" onClick={handleDownload}>
-                Descargar PDF
-              </button>
-            </form>
-            <button onClick={() => setIsModalOpen(false)}>Cerrar</button>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="min-h-screen flex items-center justify-center p-4">
+            <div className="w-full max-w-4xl">
+              <AddressForm onSubmit={handleDownload} onCancel={() => setIsModalOpen(false)} />
+            </div>
           </div>
         </div>
       )}
-
-
     </div>
   );
 }
-const modalStyles = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
-const modalContentStyles = {
-  backgroundColor: "white",
-  padding: "20px",
-  borderRadius: "8px",
-  width: "300px",
-  textAlign: "center",
-};
-
 
 export default Libro;
